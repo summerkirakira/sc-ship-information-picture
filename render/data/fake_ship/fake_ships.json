@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Kraken",
+    "chinese_name": "海妖",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 3792,
+    "manufactory": "Drake",
+    "manufactory_chinese_name": "德雷克",
+    "size": 4,
+    "crewSize": 10,
+    "role": "多功能",
+    "description": "在这个过于残酷的宇宙中，海妖是生命的保护者和自由的信标。对于那些肩负守护使命但却自身难保的公民们，海妖不仅是庇护的圣所，还是一台自给自足的战争机器！ 它随时准备与那些望而生畏的对手们进行作战。德雷克打破了那些陈腐的规则，重新定义了私人超大型船种，攻击航母，和个人自由的最初本质。想想看，如果这不是给予人民权力的证明，那又会是什么呢？",
+    "weapon": [
+      {
+        "size": 6,
+        "num": 4,
+        "name": "炮台"
+      },
+      {
+        "size": 5,
+        "num": 4,
+        "name": "炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "护盾"
+      }
+    ],
+    "missile": [
+
+    ],
+    "dimension": {
+        "x": 270,
+        "y": 64,
+        "z": 104
+    }
+  },
+  {
+    "name": "Bengal",
+    "chinese_name": "孟加拉",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 155608432,
+    "cargo": -1,
+    "manufactory": "Robert Space Industries",
+    "manufactory_chinese_name": "罗伯特太空工业",
+    "size": 4,
+    "crewSize": 755,
+    "role": "多功能",
+    "description": "RSI制造了市面上最小的飞船和最大的飞船，光是想想就很神奇吧。50艘极光首尾相连起来才有一艘巨大的孟加拉级航母那么长。",
+    "weapon": [
+        {
+            "size": 12,
+            "num": 4,
+            "name": "船舶克星 [遥控主炮台]"
+        },
+        {
+            "size": 8,
+            "num": 44,
+            "name": "实弹加农炮 [载人炮台]"
+        },
+        {
+            "size": 6,
+            "num": 12,
+            "name": "实弹加特林 [遥控阵列炮台]"
+        },
+        {
+            "size": 7,
+            "num": 76,
+            "name": "实弹加农炮 [遥控AA炮台]"
+        }
+    ],
+    "shield": [
+      {
+          "size": 4,
+          "num": 1,
+          "name": "C型护盾发生器"
+      }
+    ],
+    "missile": [
+      {
+          "size": 6,
+          "num": 12,
+          "name": "蜂窝导弹发射器"
+      }
+    ],
+    "dimension": {
+        "x": 990,
+        "y": 100,
+        "z": 100
+    }
+  }
+]

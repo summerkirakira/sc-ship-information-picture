@@ -1,0 +1,105 @@
+{
+        "itemPortName": "hardpoint_weapon_missilerack_right_wing",
+        "localName": "mrck_s03_behr_dual_s02",
+        "minSize": 3,
+        "maxSize": 3,
+        "itemTypes": [
+          {
+            "type": "MissileLauncher"
+          }
+        ],
+        "requiredTags": null,
+        "portTags": null,
+        "loadout": [
+          {
+            "itemPortName": "missile_01_attach",
+            "localName": "misl_s02_ir_fski_ignite",
+            "component": null
+          },
+          {
+            "itemPortName": "missile_02_attach",
+            "localName": "misl_s02_ir_fski_ignite",
+            "component": null
+          }
+        ],
+        "mount": {
+          "localName": "mrck_s03_behr_dual_s02",
+          "data": {
+            "manufacturerData": {
+              "calculatorType": "manufacturer",
+              "data": {
+                "calculatorName": "BEHR",
+                "name": "Behring",
+                "chineseName": "贝林财团",
+                "nameSmall": "BEHR",
+                "ref": "65a5d887-3b21-4046-a718-6912c0c7c3be"
+              }
+            },
+            "description": "Behring’s MSD-322 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 3 hardpoint for the reliable and effective launch of two S2 missiles.",
+            "grade": "A",
+            "itemClass": null,
+            "health": 200,
+            "mass": 20,
+            "name": "MSD-322 ",
+            "chineseName": "MSD-322 导弹架",
+            "chineseNameShort": null,
+            "chineseDescription": "物品类型：导弹架\\n制造商：贝林财团(Behring)\\n尺寸：3\\n导弹：2xS2\\n\\n贝林 MSD-322 “马斯登” 是一个完整的武器存储和部署系统，可以安装在任何兼容的尺寸为S3的挂载点上，以确保稳定有效地发射两枚S2导弹.",
+            "shortName": null,
+            "ref": "6bea95f5-2898-434c-bffe-4b2b332d6440",
+            "size": 3,
+            "subType": "MissileRack",
+            "type": "MissileLauncher",
+            "chineseTypeName": "导弹架",
+            "heat": {
+              "mass": 200.0,
+              "maxCoolingRate": 1.0,
+              "temperatureToIR": 0.5
+            },
+            "power": {
+              "decayRateOfEM": 0.15,
+              "isOverclockable": false,
+              "isThrottleable": false,
+              "overclockPerformance": 0.0,
+              "overclockThresholdMax": 0.0,
+              "overclockThresholdMin": 0.0,
+              "overpowerPerformance": 0.0,
+              "powerBase": 20.0,
+              "powerDraw": 20.0,
+              "timeToReachDrawRequest": 0.0,
+              "powerToEM": 2.5
+            },
+            "missileRack": {
+              "detachVelocityForward": 0.0,
+              "detachVelocityRight": 0.0,
+              "detachVelocityUp": -2.5,
+              "igniteOnPylon": false,
+              "launchDelay": 0.125,
+              "localName": ""
+            },
+            "ports": [
+              {
+                "maxSize": 2,
+                "minSize": 2,
+                "itemTypes": [
+                  {
+                    "subType": "Missile",
+                    "type": "Missile"
+                  }
+                ]
+              },
+              {
+                "maxSize": 2,
+                "minSize": 2,
+                "itemTypes": [
+                  {
+                    "subType": "Missile",
+                    "type": "Missile"
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "MissileRack",
+          "subType": "MissileRack"
+        }
+      }

@@ -1,0 +1,821 @@
+[
+    {
+        "local_name": "rsi_aurora_es",
+        "ship_name": "Aurora ES",
+        "photo_name": "Aurora ES",
+        "upgrade_name": "Aurora ES",
+        "ship_price": 2000
+    },
+    {
+        "local_name": "aegs_avenger_warlock",
+        "ship_name": "Avenger Warlock",
+        "photo_name": "avenger titan warlock",
+        "upgrade_name": "Avenger Warlock",
+        "ship_price": 8500
+    },
+    {
+        "local_name": "aegs_avenger_titan_renegade",
+        "ship_name": "Avenger Titan Renegade",
+        "photo_name": "avenger titan renegade",
+        "upgrade_name": "Avenger Titan Renegade",
+        "ship_price": 7500
+    },
+    {
+        "local_name": "orig_890jump",
+        "ship_name": "890 Jump",
+        "photo_name": "890 Jump",
+        "upgrade_name": "890 Jump",
+        "ship_price": 95000
+    },
+    {
+        "local_name": "aegs_avenger_titan",
+        "ship_name": "Avenger Titan",
+        "photo_name": "revenger titan",
+        "upgrade_name": "Avenger Titan",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "rsi_aurora_lx",
+        "ship_name": "Aurora LX",
+        "photo_name": "Aurora LX",
+        "upgrade_name": "Aurora LX",
+        "ship_price": 3500
+    },
+    {
+        "local_name": "rsi_aurora_ln",
+        "ship_name": "Aurora LN",
+        "photo_name": "Aurora LN",
+        "upgrade_name": "Aurora LN",
+        "ship_price": 4000
+    },
+    {
+        "local_name": "rsi_aurora_mr",
+        "ship_name": "Aurora MR",
+        "photo_name": "Aurora MR",
+        "upgrade_name": "Aurora MR",
+        "ship_price": 3000
+    },
+    {
+        "local_name": "rsi_aurora_cl",
+        "ship_name": "Aurora CL",
+        "photo_name": "Aurora CL",
+        "upgrade_name": "Aurora CL",
+        "ship_price": 4500
+    },
+    {
+        "local_name": "aegs_gladius",
+        "ship_name": "Gladius",
+        "photo_name": "gladius",
+        "upgrade_name": "Gladius",
+        "ship_price": 9000
+    },
+    {
+        "local_name": "aegs_avenger_stalker",
+        "ship_name": "Avenger Stalker",
+        "photo_name": "avenger titan stalker",
+        "upgrade_name": "Avenger Stalker",
+        "ship_price": 6000
+    },
+    {
+        "local_name": "aegs_vanguard_harbinger",
+        "ship_name": "Vanguard Harbinger",
+        "photo_name": "vanguard harbinger",
+        "upgrade_name": "Vanguard Harbinger",
+        "ship_price": 29000
+    },
+    {
+        "local_name": "aegs_gladius_valiant",
+        "ship_name": "Gladius Valiant",
+        "photo_name": "gladius valiant",
+        "upgrade_name": "Gladius Valiant",
+        "ship_price": 11000
+    },
+    {
+        "local_name": "anvl_c8x_pisces_expedition",
+        "ship_name": "C8X Pisces Expedition",
+        "photo_name": "C8X Pisces Expedition",
+        "upgrade_name": "C8X Pisces Expedition ",
+        "ship_price": 4500
+    },
+    {
+        "local_name": "anvl_hornet_f7cm_heartseeker",
+        "ship_name": "F7C-M Hornet Heartseeker",
+        "photo_name": "F7C-M Super Hornet Heartseeker",
+        "upgrade_name": "F7C-M Super Hornet Heartseeker",
+        "ship_price": 19500
+    },
+    {
+        "local_name": "anvl_ballista",
+        "ship_name": "Ballista",
+        "photo_name": "Ballista",
+        "upgrade_name": "Ballista ",
+        "ship_price": 14000
+    },
+    {
+        "local_name": "anvl_hornet_f7c_wildfire",
+        "ship_name": "F7C Hornet Wildfire",
+        "photo_name": "F7C Hornet Wildfire",
+        "upgrade_name": "F7C Hornet Wildfire",
+        "ship_price": 17500
+    },
+    {
+        "local_name": "aegs_vanguard_harbinger",
+        "ship_name": "Vanguard Harbinger",
+        "photo_name": "vanguard",
+        "upgrade_name": "Vanguard Harbinger",
+        "ship_price": 29000
+    },
+    {
+        "local_name": "anvl_hurricane",
+        "ship_name": "Hurricane",
+        "photo_name": "Hurricane",
+        "upgrade_name": "Hurricane",
+        "ship_price": 19500
+    },
+    {
+        "local_name": "anvl_hornet_f7cs",
+        "ship_name": "F7C-S Hornet Ghost",
+        "photo_name": "F7C-S Hornet Ghost",
+        "upgrade_name": "F7C-S Hornet Ghost",
+        "ship_price": 12500
+    },
+    {
+        "local_name": "anvl_hornet_f7cr",
+        "ship_name": "F7C-R Hornet Tracker",
+        "photo_name": "F7C-R Hornet Tracker",
+        "upgrade_name": "F7C-R Hornet Tracker",
+        "ship_price": 14000
+    },
+    {
+        "local_name": "anvl_carrack",
+        "ship_name": "Carrack",
+        "photo_name": "Carrack",
+        "upgrade_name": "Carrack",
+        "ship_price": 60000
+    },
+    {
+        "local_name": "anvl_gladiator",
+        "ship_name": "Gladiator",
+        "photo_name": "Gladiator",
+        "upgrade_name": "Gladiator",
+        "ship_price": 16500
+    },
+    {
+        "local_name": "rsi_constellation_taurus",
+        "ship_name": "Constellation Taurus",
+        "photo_name": "Constellation Taurus",
+        "upgrade_name": "Constellation Taurus",
+        "ship_price": 19000
+    },
+    {
+        "local_name": "anvl_valkyrie",
+        "ship_name": "Valkyrie",
+        "photo_name": "Valkyrie",
+        "upgrade_name": "Valkyrie",
+        "ship_price": 37500
+    },
+    {
+        "local_name": "anvl_arrow",
+        "ship_name": "Arrow",
+        "photo_name": "Arrow",
+        "upgrade_name": "Arrow",
+        "ship_price": 7500
+    },
+    {
+        "local_name": "anvl_hornet_f7cm",
+        "ship_name": "F7C-M Super Hornet",
+        "photo_name": "F7C-M Super Hornet",
+        "upgrade_name": "F7C-M Super Hornet",
+        "ship_price": 18000
+    },
+    {
+        "local_name": "anvl_hawk",
+        "ship_name": "Hawk",
+        "photo_name": "Hawk",
+        "upgrade_name": "Hawk",
+        "ship_price": 10000
+    },
+    {
+        "local_name": "rsi_constellation_phoenix",
+        "ship_name": "Constellation Phoenix",
+        "photo_name": "Constellation Phoenix",
+        "upgrade_name": "Constellation Phoenix",
+        "ship_price": 35000
+    },
+    {
+        "local_name": "anvl_terrapin",
+        "ship_name": "Terrapin",
+        "photo_name": "Terrapin",
+        "upgrade_name": "Terrapin",
+        "ship_price": 22000
+    },
+    {
+        "local_name": "anvl_spartan",
+        "ship_name": "Spartan",
+        "photo_name": "Spartan",
+        "upgrade_name": "Spartan",
+        "ship_price": 8000
+    },
+    {
+        "local_name": "rsi_constellation_aquila",
+        "ship_name": "Constellation Aquila",
+        "photo_name": "Constellation Aquila",
+        "upgrade_name": "Constellation Aquila",
+        "ship_price": 31000
+    },
+    {
+        "local_name": "rsi_constellation_andromeda",
+        "ship_name": "Constellation Andromeda",
+        "photo_name": "Constellation Andromeda",
+        "upgrade_name": "Constellation Andromeda",
+        "ship_price": 24000
+    },
+    {
+        "local_name": "anvl_hornet_f7a",
+        "ship_name": "F7A Hornet",
+        "photo_name": "F7A Hornet",
+        "upgrade_name": "F7C Hornet",
+        "ship_price": 11000
+    },
+    {
+        "local_name": "orig_100i",
+        "ship_name": "100i",
+        "photo_name": "100i",
+        "upgrade_name": "100i",
+        "ship_price": 5000
+    },
+    {
+        "local_name": "orig_135c",
+        "ship_name": "135c",
+        "photo_name": "135c",
+        "upgrade_name": "135c",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "orig_300i",
+        "ship_name": "300i",
+        "photo_name": "300i",
+        "upgrade_name": "300i",
+        "ship_price": 6000
+    },
+    {
+        "local_name": "orig_315p",
+        "ship_name": "315p",
+        "photo_name": "315p",
+        "upgrade_name": "315p",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "orig_325a",
+        "ship_name": "325a",
+        "photo_name": "325a",
+        "upgrade_name": "325a",
+        "ship_price": 7000
+    },
+    {
+        "local_name": "anvl_centurion",
+        "ship_name": "Centurion",
+        "photo_name": "ANVIL_Centurion",
+        "upgrade_name": "Centurion",
+        "ship_price": 11000
+    },
+    {
+        "local_name": "orig_m50",
+        "ship_name": "M50 Interceptor",
+        "photo_name": "m50",
+        "upgrade_name": "M50",
+        "ship_price": 10000
+    },
+    {
+        "local_name": "rsi_mantis",
+        "ship_name": "Mantis",
+        "photo_name": "Mantis",
+        "upgrade_name": "Mantis",
+        "ship_price": 15000
+    },
+    {
+        "local_name": "orig_350r",
+        "ship_name": "350r",
+        "photo_name": "350r",
+        "upgrade_name": "350r",
+        "ship_price": 12500
+    },
+    {
+        "local_name": "orig_85x",
+        "ship_name": "85X Limited",
+        "photo_name": "85X",
+        "upgrade_name": "85X",
+        "ship_price": 5000
+    },
+    {
+        "local_name": "rsi_scorpius",
+        "ship_name": "Scorpius",
+        "photo_name": "Scorpius",
+        "upgrade_name": "Scorpius",
+        "ship_price": 24000
+    },
+    {
+        "local_name": "orig_600i",
+        "ship_name": "600i",
+        "photo_name": "600i executive",
+        "upgrade_name": "600i Touring",
+        "ship_price": 43500
+    },
+    {
+        "local_name": "orig_600i",
+        "ship_name": "600i",
+        "photo_name": "600i",
+        "upgrade_name": "600i Touring",
+        "ship_price": 43500
+    },
+    {
+        "local_name": "rsi_ursa_rover",
+        "ship_name": "Ursa Rover",
+        "photo_name": "Ursa Rover",
+        "upgrade_name": "Ursa Rover",
+        "ship_price": 5000
+    },
+    {
+        "local_name": "orig_125a",
+        "ship_name": "125a",
+        "photo_name": "125a",
+        "upgrade_name": "125a",
+        "ship_price": 6000
+    },
+    {
+        "local_name": "anvl_c8_pisces",
+        "ship_name": "C8 Pisces",
+        "photo_name": "C8 Pisces",
+        "upgrade_name": "C8X Pisces Expedition ",
+        "ship_price": 4500
+    },
+    {
+        "local_name": "aegs_sabre_raven",
+        "ship_name": "Sabre Raven",
+        "photo_name": "saber raven",
+        "upgrade_name": "NULL",
+        "ship_price": 20000
+    },
+    {
+        "local_name": "anvl_ballista",
+        "ship_name": "Ballista",
+        "photo_name": "ANVIL_Ballista_Dunestalker",
+        "upgrade_name": "Ballista ",
+        "ship_price": 14000
+    },
+    {
+        "local_name": "misc_starfarer",
+        "ship_name": "Starfarer",
+        "photo_name": "Starfarer",
+        "upgrade_name": "Starfarer",
+        "ship_price": 30000
+    },
+    {
+        "local_name": "misc_prospector",
+        "ship_name": "Prospector",
+        "photo_name": "Prospector",
+        "upgrade_name": "Prospector",
+        "ship_price": 15500
+    },
+    {
+        "local_name": "misc_razor_ex",
+        "ship_name": "Razor EX",
+        "photo_name": "Razor EX",
+        "upgrade_name": "Razor EX",
+        "ship_price": 15500
+    },
+    {
+        "local_name": "tmbl_cyclone_tr",
+        "ship_name": "Cyclone TR",
+        "photo_name": "Cyclone TR",
+        "upgrade_name": "Cyclone TR",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "misc_freelancer_mis",
+        "ship_name": "Freelancer MIS",
+        "photo_name": "Freelancer MIS",
+        "upgrade_name": "Freelancer MIS",
+        "ship_price": 17500
+    },
+    {
+        "local_name": "crus_star_runner",
+        "ship_name": "Mercury Star Runner",
+        "photo_name": "Mercury Star Runner",
+        "upgrade_name": "Mercury",
+        "ship_price": 26000
+    },
+    {
+        "local_name": "misc_reliant_tana",
+        "ship_name": "Reliant Tana",
+        "photo_name": "Reliant Tana",
+        "upgrade_name": "Reliant Tana",
+        "ship_price": 7500
+    },
+    {
+        "local_name": "tmbl_cyclone_aa",
+        "ship_name": "Cyclone AA",
+        "photo_name": "Cyclone AA",
+        "upgrade_name": "Cyclone AA",
+        "ship_price": 8000
+    },
+    {
+        "local_name": "crus_starlifter_a2",
+        "ship_name": "A2 Hercules Starlifter",
+        "photo_name": "Hercules Starlifter A2",
+        "upgrade_name": "A2 Hercules",
+        "ship_price": 75000
+    },
+    {
+        "local_name": "tmbl_cyclone_mt",
+        "ship_name": "Cyclone MT",
+        "photo_name": "Cyclone MT",
+        "upgrade_name": "Cyclone MT",
+        "ship_price": 7500
+    },
+    {
+        "local_name": "crus_starfighter_inferno",
+        "ship_name": "Ares Star Fighter Inferno",
+        "photo_name": "Ares Inferno",
+        "upgrade_name": "Ares Inferno ",
+        "ship_price": 25000
+    },
+    {
+        "local_name": "misc_freelancer_dur",
+        "ship_name": "Freelancer DUR",
+        "photo_name": "Freelancer DUR",
+        "upgrade_name": "Freelancer DUR",
+        "ship_price": 13500
+    },
+    {
+        "local_name": "crus_starlifter_m2",
+        "ship_name": "M2 Hercules Starlifter",
+        "photo_name": "Hercules Starlifter M2",
+        "upgrade_name": "M2 Hercules",
+        "ship_price": 52000
+    },
+    {
+        "local_name": "misc_reliant_sen",
+        "ship_name": "Reliant Sen",
+        "photo_name": "Reliant Sen",
+        "upgrade_name": "Reliant Sen",
+        "ship_price": 8500
+    },
+    {
+        "local_name": "misc_freelancer_max",
+        "ship_name": "Freelancer MAX",
+        "photo_name": "Freelancer MAX",
+        "upgrade_name": "Freelancer MAX",
+        "ship_price": 15000
+    },
+    {
+        "local_name": "misc_freelancer",
+        "ship_name": "Freelancer",
+        "photo_name": "Freelancer",
+        "upgrade_name": "Freelancer",
+        "ship_price": 11000
+    },
+    {
+        "local_name": "tmbl_cyclone_rc",
+        "ship_name": "Cyclone RC",
+        "photo_name": "Cyclone RC",
+        "upgrade_name": "Cyclone RC",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "misc_hull_a",
+        "ship_name": "Hull A",
+        "photo_name": "Hull A",
+        "upgrade_name": "Hull A",
+        "ship_price": 9000
+    },
+    {
+        "local_name": "misc_reliant",
+        "ship_name": "Reliant Kore",
+        "photo_name": "Reliant Kore",
+        "upgrade_name": "Reliant Kore",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "tmbl_cyclone_rn",
+        "ship_name": "Cyclone RN",
+        "photo_name": "Cyclone RN",
+        "upgrade_name": "Cyclone RN",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "tmbl_nova",
+        "ship_name": "Nova",
+        "photo_name": "Nova Tank",
+        "upgrade_name": "Nova",
+        "ship_price": 12000
+    },
+    {
+        "local_name": "misc_razor_lx",
+        "ship_name": "Razor LX",
+        "photo_name": "Razor LX",
+        "upgrade_name": "Razor LX",
+        "ship_price": 15000
+    },
+    {
+        "local_name": "tmbl_cyclone",
+        "ship_name": "Cyclone",
+        "photo_name": "Cyclone",
+        "upgrade_name": "Cyclone",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "crus_starlifter_c2",
+        "ship_name": "C2 Hercules Starlifter",
+        "photo_name": "Hercules Starlifter C2",
+        "upgrade_name": "C2 Hercules",
+        "ship_price": 40000
+    },
+    {
+        "local_name": "crus_starfighter_inferno",
+        "ship_name": "Ares Star Fighter Inferno",
+        "photo_name": "Ares Ion",
+        "upgrade_name": "Ares Inferno ",
+        "ship_price": 25000
+    },
+    {
+        "local_name": "orig_400i",
+        "ship_name": "400i",
+        "photo_name": "400i",
+        "upgrade_name": "400i",
+        "ship_price": 25000
+    },
+    {
+        "local_name": "misc_starfarer_gemini",
+        "ship_name": "Starfarer Gemini",
+        "photo_name": "Starfarer Gemini",
+        "upgrade_name": "Starfarer Gemini",
+        "ship_price": 34000
+    },
+    {
+        "local_name": "misc_razor",
+        "ship_name": "Razor",
+        "photo_name": "Razor",
+        "upgrade_name": "Razor",
+        "ship_price": 14500
+    },
+    {
+        "local_name": "misc_reliant_mako",
+        "ship_name": "Reliant Mako",
+        "photo_name": "Reliant Mako",
+        "upgrade_name": "Reliant Mako",
+        "ship_price": 9500
+    },
+    {
+        "local_name": "cnou_mustang_gamma",
+        "ship_name": "Mustang Gamma",
+        "photo_name": "Mustang Gamma",
+        "upgrade_name": "Mustang Gamma",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "xian_scout",
+        "ship_name": "Khartu-al",
+        "photo_name": "Karthu Al",
+        "upgrade_name": "Khartu-Al",
+        "ship_price": 17000
+    },
+    {
+        "local_name": "cnou_mustang_beta",
+        "ship_name": "Mustang Beta",
+        "photo_name": "Mustang Beta",
+        "upgrade_name": "Mustang Beta",
+        "ship_price": 4000
+    },
+    {
+        "local_name": "cnou_hoverquad",
+        "ship_name": "HoverQuad",
+        "photo_name": "HoverQuad",
+        "upgrade_name": "HoverQuad",
+        "ship_price": 3000
+    },
+    {
+        "local_name": "xian_nox",
+        "ship_name": "Nox",
+        "photo_name": "Nox",
+        "upgrade_name": "Nox",
+        "ship_price": 4500
+    },
+    {
+        "local_name": "espr_talon",
+        "ship_name": "Talon",
+        "photo_name": "Talon",
+        "upgrade_name": "Talon",
+        "ship_price": 11500
+    },
+    {
+        "local_name": "aegs_redeemer",
+        "ship_name": "Redeemer",
+        "photo_name": "redeemer",
+        "upgrade_name": "Redeemer",
+        "ship_price": 32500
+    },
+    {
+        "local_name": "grin_ptv",
+        "ship_name": "PTV",
+        "photo_name": "Greycat PTV",
+        "upgrade_name": "STV",
+        "ship_price": 2000
+    },
+    {
+        "local_name": "aegs_retaliator",
+        "ship_name": "Retaliator",
+        "photo_name": "retaliator",
+        "upgrade_name": "Retaliator",
+        "ship_price": 15000
+    },
+    {
+        "local_name": "krig_p72_archimedes",
+        "ship_name": "P-72 Archimedes",
+        "photo_name": "P-72 archimedes",
+        "upgrade_name": "P-72 Archimedes",
+        "ship_price": 3500
+    },
+    {
+        "local_name": "cnou_mustang_delta",
+        "ship_name": "Mustang Delta",
+        "photo_name": "Mustang Delta",
+        "upgrade_name": "Mustang Delta",
+        "ship_price": 6500
+    },
+    {
+        "local_name": "vncl_scythe",
+        "ship_name": "Scythe",
+        "photo_name": "Scythe",
+        "upgrade_name": "Scythe",
+        "ship_price": 30000
+    },
+    {
+        "local_name": "xian_nox_kue",
+        "ship_name": "Nox Kue",
+        "photo_name": "Nox Kue",
+        "upgrade_name": "Nox Kue",
+        "ship_price": 4500
+    },
+    {
+        "local_name": "argo_mpuv",
+        "ship_name": "MPUV Cargo",
+        "photo_name": "MPUV Cargo",
+        "upgrade_name": "MPUV Cargo",
+        "ship_price": 3500
+    },
+    {
+        "local_name": "aegs_avenger_titan",
+        "ship_name": "Avenger Titan",
+        "photo_name": "avenger titan",
+        "upgrade_name": "Avenger Titan",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "grin_ptv",
+        "ship_name": "PTV",
+        "photo_name": "Greycat_STV",
+        "upgrade_name": "STV",
+        "ship_price": 4000
+    },
+    {
+        "local_name": "aegs_reclaimer",
+        "ship_name": "Reclaimer",
+        "photo_name": "reclaimer",
+        "upgrade_name": "Reclaimer",
+        "ship_price": 40000
+    },
+    {
+        "local_name": "grin_roc_ds",
+        "ship_name": "ROC-DS",
+        "photo_name": "ROC-DS",
+        "upgrade_name": "ROC-DS",
+        "ship_price": 7500
+    },
+    {
+        "local_name": "espr_prowler",
+        "ship_name": "Prowler",
+        "photo_name": "Prowler",
+        "upgrade_name": "Prowler",
+        "ship_price": 44000
+    },
+    {
+        "local_name": "grin_roc",
+        "ship_name": "ROC",
+        "photo_name": "ROC",
+        "upgrade_name": "ROC",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "cnou_mustang_omega",
+        "ship_name": "Mustang Omega",
+        "photo_name": "Mustang Omega",
+        "upgrade_name": "Mustang Omega",
+        "ship_price": 5500
+    },
+    {
+        "local_name": "argo_mole",
+        "ship_name": "MOLE",
+        "photo_name": "Mole",
+        "upgrade_name": "MOLE",
+        "ship_price": 31500
+    },
+    {
+        "local_name": "aegs_vanguard_sentinel",
+        "ship_name": "Vanguard Sentinel",
+        "photo_name": "vanguard sentinel",
+        "upgrade_name": "Vanguard Sentinel",
+        "ship_price": 27500
+    },
+    {
+        "local_name": "cnou_mustang_alpha",
+        "ship_name": "Mustang Alpha",
+        "photo_name": "Mustang Alpha",
+        "upgrade_name": "Mustang Alpha",
+        "ship_price": 3000
+    },
+    {
+        "local_name": "aegs_vanguard_hoplite",
+        "ship_name": "Vanguard Hoplite",
+        "photo_name": "vanguard hoplite",
+        "upgrade_name": "Vanguard Hoplite",
+        "ship_price": 23500
+    },
+    {
+        "local_name": "krig_p52_merlin",
+        "ship_name": "P-52 Merlin",
+        "photo_name": "P-52 Merlin",
+        "upgrade_name": "P-52 Merlin",
+        "ship_price": 2500
+    },
+    {
+        "local_name": "espr_talon_shrike",
+        "ship_name": "Talon Shrike",
+        "photo_name": "Talon Shrike",
+        "upgrade_name": "Talon Shrike",
+        "ship_price": 11500
+    },
+    {
+        "local_name": "aegs_hammerhead",
+        "ship_name": "Hammerhead",
+        "photo_name": "hammerhead",
+        "upgrade_name": "Hammerhead",
+        "ship_price": 72500
+    },
+    {
+        "local_name": "aegs_hammerhead",
+        "ship_name": "Hammerhead",
+        "photo_name": "hammerhead showdown",
+        "upgrade_name": "Hammerhead Best In Show Edition",
+        "ship_price": 72500
+    },
+    {
+        "local_name": "argo_mpuv_transport",
+        "ship_name": "MPUV Personnel",
+        "photo_name": "MPUV Personnel",
+        "upgrade_name": "MPUV Personnel",
+        "ship_price": 4000
+    },
+    {
+        "local_name": "argo_raft",
+        "ship_name": "RAFT",
+        "photo_name": "Raft",
+        "upgrade_name": "RAFT",
+        "ship_price": 12500
+    },
+    {
+        "local_name": "vncl_blade",
+        "ship_name": "Blade",
+        "photo_name": "Blade",
+        "upgrade_name": "Blade",
+        "ship_price": 27500
+    },
+    {
+        "local_name": "banu_defender",
+        "ship_name": "Defender",
+        "photo_name": "Defender",
+        "upgrade_name": "Defender",
+        "ship_price": 22000
+    },
+    {
+        "local_name": "cnou_nomad",
+        "ship_name": "Nomad",
+        "photo_name": "Nomad",
+        "upgrade_name": "Nomad",
+        "ship_price": 8000
+    },
+    {
+        "local_name": "fake_kraken",
+        "ship_name": "Kraken",
+        "photo_name": "Kraken",
+        "upgrade_name": "Kraken",
+        "ship_price": 150000
+    },
+    {
+        "local_name": "fake_bengal",
+        "ship_name": "Bengal",
+        "photo_name": "Bengal",
+        "upgrade_name": "Bengal",
+        "ship_price": -1
+    }
+]

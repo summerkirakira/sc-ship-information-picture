@@ -1,0 +1,82 @@
+{
+        "itemPortName": "hardpoint_shield_generator_right",
+        "localName": "shld_asas_s01_shimmer_scitem",
+        "minSize": 1,
+        "maxSize": 1,
+        "itemTypes": [
+          {
+            "type": "Shield"
+          }
+        ],
+        "requiredTags": null,
+        "portTags": null,
+        "loadout": null,
+        "mount": {
+          "localName": "shld_asas_s01_shimmer",
+          "data": {
+            "manufacturerData": {
+              "calculatorType": "manufacturer",
+              "data": {
+                "calculatorName": "ASAS",
+                "name": "Ascension Astro",
+                "chineseName": "上升航天",
+                "nameSmall": "ASAS",
+                "ref": "abca0ae0-a819-4aeb-a1a7-f8f1d7e277cf"
+              }
+            },
+            "description": "Ascension Astro is known for one thing — quality stealth components. Their Shimmer shield generator was built not only to help avoid detection, but also provide protection when needed most.",
+            "grade": "C",
+            "itemClass": "Stealth",
+            "health": 93,
+            "mass": 431,
+            "name": "Shimmer",
+            "chineseName": "微光",
+            "chineseNameShort": null,
+            "chineseDescription": "物品类型：护盾生成器\\n制造商：上升航天(Ascension Astro)\\n尺寸：1\\n等级：C\\n类别：隐形\\n\\n上升航天因一个东西而闻名 — 极高质量的隐形装置.这款\"微光\"型护盾生成器不仅仅能够帮助你避开探测，还能够在你最需要的时刻给你提供保护.",
+            "shortName": null,
+            "ref": "ecc8d200-548c-4de0-a60e-d1e316515170",
+            "size": 1,
+            "subType": "Shield",
+            "type": "Shield",
+            "chineseTypeName": "护盾",
+            "shield": {
+              "damagedRegenDelay": 5.0,
+              "decayRatio": 0.25,
+              "downedRegenDelay": 5.0,
+              "maxShieldHealth": 1500.0,
+              "maxShieldRegen": 375.0,
+              "regenExcessChargePerSec": 10.0,
+              "regenExcessMax": 0.0,
+              "regenExcessUseCooldown": 5.0
+            },
+            "distortion": {
+              "decayDelay": 1.5,
+              "decayRate": 5.0,
+              "maximum": 916.5,
+              "powerChangeOnlyAtMaxDistortion": false,
+              "powerRatioAtMaxDistortion": false,
+              "recoveryRatio": 0.51,
+              "warningRatio": 0.75
+            },
+            "heat": {
+              "mass": 431.25,
+              "maxCoolingRate": 31.07826,
+              "temperatureToIR": 40.0
+            },
+            "power": {
+              "decayRateOfEM": 0.2,
+              "isOverclockable": false,
+              "isThrottleable": true,
+              "overclockPerformance": 0.0,
+              "overclockThresholdMax": 0.0,
+              "overclockThresholdMin": 0.0,
+              "overpowerPerformance": 0.0,
+              "powerBase": 200.0,
+              "powerDraw": 250.0,
+              "timeToReachDrawRequest": 0.0,
+              "powerToEM": 7.1
+            }
+          },
+          "type": "Shield"
+        }
+      }
