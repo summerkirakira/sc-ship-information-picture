@@ -3,7 +3,7 @@ import json
 from pydantic import BaseModel
 from calculator import Calculator
 from pathlib import Path
-from pic_drawer import PicDrawer, ShipDrawer
+# from pic_drawer import PicDrawer, ShipDrawer
 import pathlib
 
 
@@ -91,13 +91,17 @@ class FakeShip(BaseModel):
         return sample_ship
 
 
-with open(Path(__file__).parent / "data" / "fake_ship" / "fake_ships.json", 'r') as f:
-    data = json.load(f)
-    fake_ships = [FakeShip(**d) for d in data]
-    new_ships = [fake_ship.convert_to_real_ship() for fake_ship in fake_ships]
+def load_fake_ship():
+    with open(Path(__file__).parent / "data" / "fake_ship" / "fake_ships.json", 'r') as f:
+        data = json.load(f)
+        fake_ships = [FakeShip(**d) for d in data]
+        new_ships = [fake_ship.convert_to_real_ship() for fake_ship in fake_ships]
+    return new_ships
 
-calculator = Calculator()
 
-for ship in new_ships:
-    ship_drawer = ShipDrawer(ship, calculator)
-    ship_drawer.draw(pathlib.Path("test/"))
+# if __name__ == '__main__':
+#     calculator = Calculator()
+#
+#     for ship in load_fake_ship():
+#         ship_drawer = ShipDrawer(ship, calculator)
+#         ship_drawer.draw(pathlib.Path("test/"))

@@ -62,6 +62,7 @@ class Translation:
         "MIC L2": "微L2",
         "MIC L3": "微L3",
         "Regal Luxury": "王权奢华租赁",
+        "Regal Luxury Rentals": "王权奢华租赁",
         "Ship Weapons Shop": "船舶武器店",
         "Shubin Interstellar Services": "舒宾星际",
         "Tammany & Sons": "坦姆尼父子",

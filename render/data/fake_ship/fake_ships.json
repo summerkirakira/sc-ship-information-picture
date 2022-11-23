@@ -7,8 +7,8 @@
     "fuel": -1,
     "mass": -1,
     "cargo": 3792,
-    "manufactory": "Drake",
-    "manufactory_chinese_name": "德雷克",
+    "manufactory": "Drake Interplanetary",
+    "manufactory_chinese_name": "德雷克行星系",
     "size": 4,
     "crewSize": 10,
     "role": "多功能",
@@ -33,12 +33,11 @@
       }
     ],
     "missile": [
-
     ],
     "dimension": {
-        "x": 270,
-        "y": 64,
-        "z": 104
+      "x": 270,
+      "y": 64,
+      "z": 104
     }
   },
   {
@@ -56,45 +55,311 @@
     "role": "多功能",
     "description": "RSI制造了市面上最小的飞船和最大的飞船，光是想想就很神奇吧。50艘极光首尾相连起来才有一艘巨大的孟加拉级航母那么长。",
     "weapon": [
-        {
-            "size": 12,
-            "num": 4,
-            "name": "船舶克星 [遥控主炮台]"
-        },
-        {
-            "size": 8,
-            "num": 44,
-            "name": "实弹加农炮 [载人炮台]"
-        },
-        {
-            "size": 6,
-            "num": 12,
-            "name": "实弹加特林 [遥控阵列炮台]"
-        },
-        {
-            "size": 7,
-            "num": 76,
-            "name": "实弹加农炮 [遥控AA炮台]"
-        }
+      {
+        "size": 12,
+        "num": 4,
+        "name": "船舶克星 [遥控主炮台]"
+      },
+      {
+        "size": 8,
+        "num": 44,
+        "name": "实弹加农炮 [载人炮台]"
+      },
+      {
+        "size": 6,
+        "num": 12,
+        "name": "实弹加特林 [遥控阵列炮台]"
+      },
+      {
+        "size": 7,
+        "num": 76,
+        "name": "实弹加农炮 [遥控防空炮台]"
+      }
     ],
     "shield": [
       {
-          "size": 4,
-          "num": 1,
-          "name": "C型护盾发生器"
+        "size": 4,
+        "num": 1,
+        "name": "C型护盾发生器"
       }
     ],
     "missile": [
       {
-          "size": 6,
-          "num": 12,
-          "name": "蜂窝导弹发射器"
+        "size": 6,
+        "num": 12,
+        "name": "蜂窝导弹发射器"
       }
     ],
     "dimension": {
-        "x": 990,
-        "y": 100,
-        "z": 100
+      "x": 990,
+      "y": 100,
+      "z": 100
+    }
+  },
+  {
+    "name": "Javelin",
+    "chinese_name": "标枪",
+    "health": 841840,
+    "quantum_fuel": 400000,
+    "fuel": 9580000,
+    "mass": 109860179,
+    "cargo": 5400,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 80,
+    "role": "战斗",
+    "description": "标枪是一艘巨大无比的模块化主力舰，最初为UEE军队而设计，在适当改装后也可以进行商业活动。标枪有着细节丰富的内构、充足的模块化房间的选择，还能够容纳大量船员，它以战场多面手的形象而闻名。",
+    "weapon": [
+      {
+        "size": 9,
+        "num": 8,
+        "name": "激光加农炮 [遥控STS炮台]"
+      },
+      {
+        "size": 7,
+        "num": 12,
+        "name": "加农炮 [载人ATA炮台]"
+      },
+      {
+        "size": 4,
+        "num": 12,
+        "name": "实弹加特林 [载人ATA炮台]"
+      },
+      {
+        "size": 7,
+        "num": 14,
+        "name": "M9A激光加农炮 [载人ATA炮台]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 4,
+        "name": "C级护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 12,
+        "num": 2,
+        "name": "\"荒凉者\" 反主力舰鱼雷发射器 [16S12导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 480,
+      "y": 198,
+      "z": 72
+    }
+  },
+  {
+    "name": "Railen",
+    "chinese_name": "锐伦",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 320,
+    "manufactory": "Gatac Manufacture",
+    "manufactory_chinese_name": "盖塔克制造",
+    "size": 2,
+    "crewSize": 4,
+    "role": "货运",
+    "description": "作为盖塔克首次面向人类市场的产品：锐伦这艘别致的星际飞船，是任何需要安全可靠的中型货运飞船的人类或希安驾驶员的完美选择；也是为何希安皇帝能够放心将工业飞船交给盖塔克家族生产的典例",
+    "weapon": [
+      {
+        "size": 4,
+        "num": 4,
+        "name": "载人炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 3,
+        "num": 2,
+        "name": "L护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [8S1 导弹]"
+      },
+      {
+          "size": 3,
+          "num": 2,
+          "name": "导弹架 [2S2 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 54,
+      "y": 52,
+      "z": 67
+    }
+  },
+  {
+    "name": "Merchantman",
+    "chinese_name": "巴努 商船",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 9635000,
+    "cargo": 2880,
+    "manufactory": "Banu Souli",
+    "manufactory_chinese_name": "巴努",
+    "size": 2,
+    "crewSize": 8,
+    "role": "货运",
+    "description": "巴努商人们以其高超的贸易才能而闻名。他们穿行于宇宙之间，与任何所遇之人谈下买卖。他们专用于贸易的坚固飞船已经证明了自己便是这项任务的理想舰船。巴努人将这些飞船视作珍宝，经常一代又一代地在族内传承下去",
+    "weapon": [
+      {
+        "size": 8,
+        "num": 2,
+        "name": "载人炮台"
+      },
+      {
+        "size": 5,
+        "num": 2,
+        "name": "载人炮台"
+      },
+      {
+        "size": 4,
+        "num": 4,
+        "name": "遥控炮台"
+      },
+      {
+        "size": 3,
+        "num": 4,
+        "name": "自动防空炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [8S1 导弹]"
+      },
+      {
+          "size": 3,
+          "num": 2,
+          "name": "导弹架 [2S2 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 54,
+      "y": 52,
+      "z": 67
+    }
+  },
+  {
+    "name": "Idris-P",
+    "chinese_name": "伊德里斯-P",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 37854373,
+    "cargo": 995,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 28,
+    "role": "战斗",
+    "description": "伊德里斯P是为了UEE巡逻组织研发的伊德利斯和平守卫者变体，舰炮和龙骨炮被拆除，取而代之的是更多的货物空间以及更高的速度",
+    "weapon": [
+      {
+        "size": 10,
+        "num": 1,
+        "name": "空槽位"
+      },
+      {
+        "size": 5,
+        "num": 14,
+        "name": "CF-557 [炮台]"
+      },
+      {
+        "size": 4,
+        "num": 8,
+        "name": "实弹加特林 [炮台]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+
+    ],
+    "dimension": {
+      "x": 233,
+      "y": 126,
+      "z": 46
+    }
+  },
+  {
+    "name": "Idris-M",
+    "chinese_name": "伊德里斯-M",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 37854373,
+    "cargo": 831,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 28,
+    "role": "战斗",
+    "description": "The Aegis Idris-M (Idris Military) is a frigate used by the UEE Military.[1] It lends its name to the standard line of frigates in the United Empire of Earth Navy (UEEN). Idrises are larger than traditional corvettes, but smaller than destroyers and destroyer escorts.",
+    "weapon": [
+      {
+        "size": 10,
+        "num": 1,
+        "name": "毁灭者电磁炮"
+      },
+      {
+        "size": 7,
+        "num": 2,
+        "name": "M9A 加农炮 [STS炮台]"
+      },
+      {
+        "size": 5,
+        "num": 12,
+        "name": "CF-557 [ASA炮台]"
+      },
+      {
+        "size": 4,
+        "num": 8,
+        "name": "实弹加特林 [遥控炮台]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 8,
+        "num": 1,
+        "name": "反舰导弹发射器 [10S5 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 233,
+      "y": 126,
+      "z": 46
     }
   }
 ]

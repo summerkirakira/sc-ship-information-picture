@@ -5,6 +5,7 @@ from calculator import Calculator
 import pathlib
 import logging
 import abc
+from generate_fake_ship import load_fake_ship
 from pathlib import Path
 from typing import Union
 from typing import Optional
@@ -216,6 +217,8 @@ class PicDrawer:
 
         def add_manufacturer_chinese_name(self):
             font = ImageFont.truetype(str(self.default_font_path), size=110)
+            if not self.data.data.manufacturerData.data.chineseName:
+                self.data.data.manufacturerData.data.chineseName = self.data.data.name
             while font.getlength(self.data.data.manufacturerData.data.chineseName) > 1000:
                 font = ImageFont.truetype(str(self.default_font_path), size=font.size - 1)
             text = self.data.data.manufacturerData.data.chineseName
@@ -228,14 +231,18 @@ class PicDrawer:
 
         def add_manufacturer_english_name(self):
             font = ImageFont.truetype(str(self.default_font_path), size=110)
-            while font.getlength(self.data.data.manufacturerData.data.name) > 900:
-                font = ImageFont.truetype(str(self.default_font_path), size=font.size - 1)
             text = self.data.data.manufacturerData.data.name
             if text.startswith("Musashi"):
                 text = text.split("&")[0]
             elif text.startswith("Roberts"):
-                text = "Roberts Industries"
-            self.add_text_center(text, x=3710, y=2110, font=font)
+                text = "Roberts Space Industries"
+            while font.getlength(text) > 900:
+                font = ImageFont.truetype(str(self.default_font_path), size=font.size - 1)
+            # get the height of the font
+            bbox = self.drawer.textbbox((0, 0), text, font=font)
+            height = bbox[3] - bbox[1]
+            self.add_text_center(text, x=3710, y=2190 - int(height / 2), font=font)
+            # self.add_text_center(text, x=3710, y=2110, font=font)
             pass
 
         def add_type(self):
@@ -296,8 +303,14 @@ class PicDrawer:
                                        y=start_y - len(shop_info.results) * 250 + 130,
                                        font=price_font, fill=(255, 140, 64))
             for i, result in enumerate(shop_info.results):
-                self.add_reversed_text(result.shop.data.nameChinese, x=x, y=start_y - i * 250, font=font)
-                self.add_reversed_text(result.shop.data.locationChinese, x=x, y=start_y - i * 250 + 100, font=font)
+                if result.shop.data.nameChinese:
+                    self.add_reversed_text(result.shop.data.nameChinese, x=x, y=start_y - i * 250, font=font)
+                else:
+                    self.add_reversed_text("商店", x=x, y=start_y - i * 250, font=font)
+                if result.shop.data.locationChinese:
+                    self.add_reversed_text(result.shop.data.locationChinese, x=x, y=start_y - i * 250 + 100, font=font)
+                else:
+                    self.add_reversed_text(result.shop.data.location, x=x, y=start_y - i * 250 + 100, font=font)
                 if i != len(shop_info.results) - 1:
                     self.drawer.line(((x - 600, start_y - i * 250 - 15),
                                       (x, start_y - i * 250 - 15)),
@@ -1108,8 +1121,8 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         font = ImageFont.truetype(str(self.default_font_path), size=150)
         self.drawer.text((4400, 1960), "舰船", font=font, fill="white")
 
-    def save(self, pic_path: pathlib.Path):
-        self.pic.save(str(pic_path / f"{self.data.data.name}.png"))
+    # def save(self, pic_path: pathlib.Path):
+    #     self.pic.save(str(pic_path / f"{self.data.data.name}.png"))
 
 
 if __name__ == '__main__':
@@ -1130,31 +1143,33 @@ if __name__ == '__main__':
     # drawer.draw_sheet(Sheet(**test_data))
     calculator = Calculator()
 
-    for ship in calculator.ships:
+    ship_data = calculator.ships + load_fake_ship()
+
+    for ship in ship_data:
         try:
             ship_drawer = ShipDrawer(ship, calculator)
             ship_drawer.draw(pathlib.Path("test/"))
         except Exception as e:
-            print(f"{ship.data.chineseName} 生成失败")
+            print(f"{ship.data.chineseName}({ship.localName}) 生成失败")
             logging.exception(e)
             continue
 
-    # for i, weapon in enumerate(calculator.weapons):
-    #     component_drawer = WeaponDrawer(weapon, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
-    # for i, shield in enumerate(calculator.shields):
-    #     component_drawer = ShieldDrawer(shield, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
-    # for i, missile in enumerate(calculator.missiles):
-    #     component_drawer = MissileDrawer(missile, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
-    # for i, emp in enumerate(calculator.emps):
-    #     component_drawer = EMPDrawer(emp, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
-    # for i, power_plant in enumerate(calculator.power_plants):
-    #     component_drawer = PowerPlantDrawer(power_plant, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
-    # for i, qdrive in enumerate(calculator.qdrives):
-    #     component_drawer = QDriveDrawer(qdrive, calculator)
-    #     component_drawer.draw(pathlib.Path("test/"))
+    for i, weapon in enumerate(calculator.weapons):
+        component_drawer = WeaponDrawer(weapon, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
+    for i, shield in enumerate(calculator.shields):
+        component_drawer = ShieldDrawer(shield, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
+    for i, missile in enumerate(calculator.missiles):
+        component_drawer = MissileDrawer(missile, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
+    for i, emp in enumerate(calculator.emps):
+        component_drawer = EMPDrawer(emp, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
+    for i, power_plant in enumerate(calculator.power_plants):
+        component_drawer = PowerPlantDrawer(power_plant, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
+    for i, qdrive in enumerate(calculator.qdrives):
+        component_drawer = QDriveDrawer(qdrive, calculator)
+        component_drawer.draw(pathlib.Path("test/"))
 

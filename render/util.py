@@ -1,39 +1,38 @@
-from io import BytesIO
-from PIL import Image
-from nonebot.adapters.onebot.v11 import Bot, Event, GroupMessageEvent, MessageSegment, Message
-from .models import ComponentData
-from typing import Union
+import json
+from pathlib import Path
+import os
+from thefuzz import process
 
 
-def convert_image_to_bytes(image: Image) -> bytes:
-    output = BytesIO()
-    image.save(output, format='PNG')
-    return output.getvalue()
+def format_ship_file(name):
+    ship_path = Path(__file__).parent / "data" / "ships.json"
+
+    with open(ship_path, 'r') as f:
+        ships = json.load(f)
+
+    with open(ship_path, 'w') as f:
+        json.dump(ships, f, indent=4)
 
 
-async def send_image(bot: Bot, group_id: int, ref: str):
-    await bot.call_api('send_group_msg', group_id=group_id, message=f"[CQ:image,file=https://biaoju.site/components/{ref}.png]")
+def get_aliases():
+    alias_path = Path(__file__).parent / "data" / "alias.json"
+    new_alias_path = Path(__file__).parent / "data" / "new_alias.json"
 
+    with open(alias_path, 'r') as f:
+        aliases = json.load(f)
 
-def check_is_sendable(item_list: list[tuple[ComponentData, float]]) -> list[tuple[ComponentData, float]]:
-    matched_list: list[tuple[ComponentData, float]] = []
-    highest_ratio = 0
-    for item, ratio in item_list:
-        if ratio < highest_ratio:
-            break
-        if ratio >= 0.5:
-            matched_list.append((item, ratio))
-            highest_ratio = ratio
-    return matched_list
+    current_ships = os.listdir(Path(__file__).parent / "test")
+    current_ships = [ship.split('.')[0] for ship in current_ships]
+    new_aliases = {}
+    for ship in aliases:
+        match_ship = process.extractOne(ship, current_ships)
+        if match_ship[1] == 100:
+            continue
+        result = input(f'{ship} -> {match_ship[0]}? (y/n/s)')
+        if result == 's':
+            new_aliases[ship] = aliases[ship]
+    with open(new_alias_path, 'w') as f:
+        json.dump(new_aliases, f, indent=4, ensure_ascii=False)
 
-
-def double_check_message(item_list: list[tuple[ComponentData, float]]) -> str:
-    message: str = '小九不是很清楚你要找的是什么哦~\n请问你要找的是--\n'
-    item_list: list[tuple[ComponentData, float]] = [(item, ratio) for item, ratio in item_list if ratio > 0.2]
-    if not item_list:
-        return '小九没有找到匹配的物品哦~请尝试使用更精确的中英文搜索哦～'
-    for item, ratio in item_list:
-        message += f'[{item.data.chineseTypeName}]{item.data.chineseName}\n'
-    message = message[:-1]
-    return message
+get_aliases()
 
