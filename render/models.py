@@ -25,7 +25,7 @@ class ComponentData(BaseModel):
         itemClass: Optional[str] = None
         health: int = 0
         mass: int = 0
-        name: str
+        name: str = "-"
         chineseName: Optional[str] = None
         chineseNameShort: Optional[str] = None
         chineseDescription: Optional[str] = None
@@ -337,7 +337,7 @@ class Cooler(ComponentData):
         subType: str = "Cooler"
         type: str = "Cooler"
         cooler: CoolerData
-        distortion: ComponentData.Distortion
+        # distortion: ComponentData.Distortion
         heat: ComponentData.Heat
         power: ComponentData.Power
         itemClass: Optional[str] = None

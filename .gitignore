@@ -163,3 +163,5 @@ cython_debug/
 .idea/
 
 **/.Ds_Store
+/ship-render
+/Item image

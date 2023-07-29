@@ -39,13 +39,13 @@ class FakeShip(BaseModel):
     dimension: Dimension
 
     def convert_to_real_ship(self):
-        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_ship.json", 'r') as f:
+        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_ship.json", 'r', encoding="utf-8") as f:
             sample_ship = Ship(**json.load(f))
-        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_turret.json", 'r') as f:
+        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_turret.json", 'r', encoding="utf-8") as f:
             sample_turret = Ship.Data.Loadout(**json.load(f))
-        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_missile.json", 'r') as f:
+        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_missile.json", 'r', encoding="utf-8") as f:
             sample_missile = Ship.Data.Loadout(**json.load(f))
-        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_shield.json", 'r') as f:
+        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_shield.json", 'r', encoding="utf-8") as f:
             sample_shield = Ship.Data.Loadout(**json.load(f))
         sample_ship.data.name = self.name
         sample_ship.data.chineseName = self.chinese_name
@@ -92,7 +92,7 @@ class FakeShip(BaseModel):
 
 
 def load_fake_ship():
-    with open(Path(__file__).parent / "data" / "fake_ship" / "fake_ships.json", 'r') as f:
+    with open(Path(__file__).parent / "data" / "fake_ship" / "fake_ships.json", 'r', encoding="utf-8") as f:
         data = json.load(f)
         fake_ships = [FakeShip(**d) for d in data]
         new_ships = [fake_ship.convert_to_real_ship() for fake_ship in fake_ships]

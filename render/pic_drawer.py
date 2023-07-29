@@ -13,7 +13,7 @@ import json
 
 ship_name_binding_path = pathlib.Path(__file__).parent / "data" / "ship_name_binding.json"
 
-ship_pic_path = pathlib.Path('/Users/forever/Documents/Code/ship-render')
+ship_pic_path = pathlib.Path(r'C:\Users\Summerkirakira\PycharmProjects\sc-ship-information-picture\ship-render')
 
 icon_path = pathlib.Path(__file__).parent / "data" / "image"
 
@@ -139,7 +139,7 @@ class PicDrawer:
             self.height = 2480
             self.pic = Image.new('RGBA', (self.width, self.height), (76, 75, 74))
             self.drawer = ImageDraw.Draw(self.pic)
-            self.pic_path = pathlib.Path("/Users/forever/Documents/SC PIC/item_pics")
+            self.pic_path = pathlib.Path(r"C:\Users\Summerkirakira\PycharmProjects\sc-ship-information-picture\Item image")
             self.data = data
             self.calculator = calculator
 

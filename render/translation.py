@@ -106,7 +106,7 @@ class Translation:
         Reads the file and stores the data in a dictionary
         :return:
         """
-        with self.path.open('r') as f:
+        with self.path.open('r', encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if not line or line.startswith('#'):

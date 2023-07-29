@@ -83,19 +83,19 @@ class Loader:
 
     @translate_component
     def load_missiles(self) -> list[Missile]:
-        with open(self.missile_path, "r") as f:
+        with open(self.missile_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Missile(**d) for d in data]
 
     @translate_component
     def load_bombs(self) -> list[Bomb]:
-        with open(self.bomb_path, "r") as f:
+        with open(self.bomb_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Bomb(**d) for d in data]
 
     @translate_component
     def load_shields(self) -> list[Shield]:
-        with open(self.shield_path, "r") as f:
+        with open(self.shield_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         for d in data:
             d['data']['itemClass'] = d['data']['class']
@@ -103,7 +103,7 @@ class Loader:
 
     @translate_component
     def load_coolers(self) -> list[Cooler]:
-        with open(self.cooler_path, "r") as f:
+        with open(self.cooler_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         for d in data:
             d['data']['itemClass'] = d['data']['class']
@@ -111,31 +111,31 @@ class Loader:
 
     @translate_component
     def load_weapons(self) -> list[Weapon]:
-        with open(self.weapon_path, "r") as f:
+        with open(self.weapon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Weapon(**d) for d in data]
 
     @translate_component
     def load_emps(self) -> list[EMP]:
-        with open(self.emp_path, "r") as f:
+        with open(self.emp_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [EMP(**d) for d in data]
 
     @translate_component
     def load_mining_lasers(self) -> list[MiningLaser]:
-        with open(self.mining_laser_path, "r") as f:
+        with open(self.mining_laser_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [MiningLaser(**d) for d in data]
 
     @translate_component
     def load_mounts(self) -> list[Mount]:
-        with open(self.mount_path, "r") as f:
+        with open(self.mount_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Mount(**d) for d in data]
 
     @translate_component
     def load_power_plants(self) -> list[PowerPlant]:
-        with open(self.power_plant_path, "r") as f:
+        with open(self.power_plant_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         for d in data:
             if 'class' in d['data']:
@@ -144,7 +144,7 @@ class Loader:
 
     @translate_component
     def load_qdrives(self) -> list[QDrive]:
-        with open(self.qdrive_path, "r") as f:
+        with open(self.qdrive_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         for d in data:
             if 'class' in d['data']:
@@ -153,7 +153,7 @@ class Loader:
 
     @translate_component
     def load_qeds(self) -> list[Qed]:
-        with open(self.qed_path, "r") as f:
+        with open(self.qed_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         for d in data:
             if 'class' in d['data']:
@@ -162,30 +162,30 @@ class Loader:
 
     @translate_component
     def load_utilities(self) -> list[Utility]:
-        with open(self.utility_path, "r") as f:
+        with open(self.utility_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Utility(**d) for d in data]
 
     @translate_component
     def load_paints(self) -> list[Paint]:
-        with open(self.paint_path, "r") as f:
+        with open(self.paint_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Paint(**d) for d in data]
 
     @translate_vehicle
     def load_ships(self) -> list[Ship]:
-        with open(self.ship_path, "r") as f:
+        with open(self.ship_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [Ship(**d) for d in data]
 
     @translate_component
     def load_missile_racks(self) -> list[MissileRack]:
-        with open(self.missile_rack_path, "r") as f:
+        with open(self.missile_rack_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return [MissileRack(**d) for d in data]
 
     def load_shops(self) -> list[Shop]:
-        with open(self.shop_path, "r") as f:
+        with open(self.shop_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         shops: list[Shop] = [Shop(**d) for d in data]
         for shop in shops:
@@ -195,7 +195,7 @@ class Loader:
 
     def load_all(self):
         self.weapons = self.load_weapons()
-        # self.missiles = self.load_missiles()
+        self.missiles = self.load_missiles()
         self.ships = self.load_ships()
         self.shops = self.load_shops()
         self.bombs = self.load_bombs()
