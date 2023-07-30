@@ -704,8 +704,15 @@ class Ship(ComponentData):
         fuelCapacity: float
         qtFuelCapacity: float
 
+    class Sku(BaseModel):
+        name: str
+        price: int
+
     data: Data
     isFlyable: bool = False
+    alias = list[str]
+    cirno_id: int
+    skus: list[Sku] = []
 
 
 class ShopSearch(BaseModel):
@@ -735,3 +742,22 @@ class ShipNameBinding(BaseModel):
     photo_name: str
     upgrade_name: str
     ship_price: int
+
+
+class Archive(BaseModel):
+    ships: list[Ship]
+    weapons: list[Weapon]
+    missiles: list[Missile]
+    shops: list[Shop]
+    bombs: list[Bomb]
+    shields: list[Shield]
+    coolers: list[Cooler]
+    emps: list[EMP]
+    mining_lasers: list[MiningLaser]
+    mounts: list[Mount]
+    power_plants: list[PowerPlant]
+    quantum_drives: list[QDrive]
+    qeds: list[Qed]
+    utilities: list[Utility]
+    paints: list[Paint]
+    missile_racks: list[MissileRack]

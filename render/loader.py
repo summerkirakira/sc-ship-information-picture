@@ -1,4 +1,4 @@
-from models import Missile, Bomb, Shield, Weapon, Cooler, EMP, MiningLaser, Mount, PowerPlant, QDrive, Qed, Utility, Paint, MissileRack, Ship, Shop, ComponentData
+from models import Missile, Bomb, Shield, Weapon, Cooler, EMP, MiningLaser, Mount, PowerPlant, QDrive, Qed, Utility, Paint, MissileRack, Ship, Shop, ComponentData, Archive
 import json
 import pathlib
 from typing import Callable
@@ -23,7 +23,7 @@ class Loader:
         self.paint_path = pathlib.Path(__file__).parent / "data" / "paints.json"
         self.ship_path = pathlib.Path(__file__).parent / "data" / "ships.json"
         self.missile_rack_path = pathlib.Path(__file__).parent / "data" / "missile_racks.json"
-
+        self.archive_path = pathlib.Path(__file__).parent / "data" / "archive.json"
         self.localization_path = pathlib.Path(__file__).parent / "data" / "global.ini"
 
         self.missiles: list[Missile] = []
@@ -45,7 +45,9 @@ class Loader:
 
         self.localization = Translation(self.localization_path)
 
-        self.load_all()
+        # self.load_all()
+        self.load_from_archive()
+        # self.save_all()
 
     def translate_component(func: Callable[['Loader'], list[ComponentData]], *args, **kwargs) -> Callable[
         ['Loader'], list[ComponentData]]:
@@ -210,6 +212,49 @@ class Loader:
         self.utilities = self.load_utilities()
         self.paints = self.load_paints()
         self.missile_racks = self.load_missile_racks()
+
+    def save_all(self):
+        archive = Archive(
+            weapons=self.weapons,
+            missiles=self.missiles,
+            ships=self.ships,
+            shops=self.shops,
+            bombs=self.bombs,
+            shields=self.shields,
+            coolers=self.coolers,
+            emps=self.emps,
+            mining_lasers=self.mining_lasers,
+            mounts=self.mounts,
+            power_plants=self.power_plants,
+            quantum_drives=self.qdrives,
+            qeds=self.qeds,
+            utilities=self.utilities,
+            paints=self.paints,
+            missile_racks=self.missile_racks
+        )
+        with open(self.archive_path, "w", encoding="utf-8") as f:
+            json.dump(archive.dict(), f, ensure_ascii=False, indent=4)
+
+    def load_from_archive(self):
+        with open(self.archive_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        archive = Archive(**data)
+        self.weapons = archive.weapons
+        self.missiles = archive.missiles
+        self.ships = archive.ships
+        self.shops = archive.shops
+        self.bombs = archive.bombs
+        self.shields = archive.shields
+        self.coolers = archive.coolers
+        self.emps = archive.emps
+        self.mining_lasers = archive.mining_lasers
+        self.mounts = archive.mounts
+        self.power_plants = archive.power_plants
+        self.qdrives = archive.quantum_drives
+        self.qeds = archive.qeds
+        self.utilities = archive.utilities
+        self.paints = archive.paints
+        self.missile_racks = archive.missile_racks
 
 
 if __name__ == "__main__":

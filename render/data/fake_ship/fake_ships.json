@@ -361,5 +361,249 @@
       "y": 126,
       "z": 46
     }
+  },
+  {
+    "name": "Idris-M",
+    "chinese_name": "伊德里斯-M",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 37854373,
+    "cargo": 831,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 28,
+    "role": "战斗",
+    "description": "The Aegis Idris-M (Idris Military) is a frigate used by the UEE Military.[1] It lends its name to the standard line of frigates in the United Empire of Earth Navy (UEEN). Idrises are larger than traditional corvettes, but smaller than destroyers and destroyer escorts.",
+    "weapon": [
+      {
+        "size": 10,
+        "num": 1,
+        "name": "毁灭者电磁炮"
+      },
+      {
+        "size": 7,
+        "num": 2,
+        "name": "M9A 加农炮 [STS炮台]"
+      },
+      {
+        "size": 5,
+        "num": 12,
+        "name": "CF-557 [ASA炮台]"
+      },
+      {
+        "size": 4,
+        "num": 8,
+        "name": "实弹加特林 [遥控炮台]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 8,
+        "num": 1,
+        "name": "反舰导弹发射器 [10S5 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 233,
+      "y": 126,
+      "z": 46
+    }
+  },
+  {
+    "name": "A1 Spirit",
+    "chinese_name": "十字军 A1 星灵",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 0,
+    "manufactory": "Crusader Industries",
+    "manufactory_chinese_name": "十字军工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "战斗",
+    "description": "凭借A1 星灵，十字军工业将一贯的优良品质带到了平民市场。这是一艘轻型轰炸机配置的中等大小多功能星际飞船，同时还兼具足够的多功能属性来应对多种职能以及无法预见的任务。",
+    "weapon": [
+      {
+        "size": 3,
+        "num": 2,
+        "name": "机翼固定式火炮"
+      },
+      {
+        "size": 2,
+        "num": 2,
+        "name": "机鼻可动式炮台"
+      },
+      {
+          "size": 3,
+          "num": 1,
+          "name": "遥控炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [2S3 导弹]"
+      },
+      {
+        "size": 5,
+        "num": 2,
+        "name": "花冠炸弹架 [5S5 炸弹]"
+      }
+    ],
+    "dimension": {
+      "x": 46.5,
+      "y": 43.5,
+      "z": 10
+    }
+  },
+  {
+    "name": "C1 Spirit",
+    "chinese_name": "十字军 C1 星灵",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 48,
+    "manufactory": "Crusader Industries",
+    "manufactory_chinese_name": "十字军工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "运输",
+    "description": "凭借C1 星灵，十字军工业将一贯的优良品质带到了平民市场。这是一艘为货物运输于投递而造的中等大小多功能星际飞船，同时还兼具足够的多功能属性来应对多种职能以及无法预见的任务。",
+    "weapon": [
+      {
+        "size": 3,
+        "num": 2,
+        "name": "机翼固定式火炮"
+      },
+      {
+        "size": 2,
+        "num": 2,
+        "name": "机鼻可动式炮台"
+      },
+      {
+          "size": 3,
+          "num": 1,
+          "name": "遥控炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [2S3 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 46.5,
+      "y": 43.5,
+      "z": 10
+    }
+  },
+  {
+    "name": "E1 Spirit",
+    "chinese_name": "十字军 E1 星灵",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 0,
+    "manufactory": "Crusader Industries",
+    "manufactory_chinese_name": "十字军工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "VIP运输",
+    "description": "凭借E1 星灵，十字军工业将一贯的优良品质带到了平民市场。这是一艘目标重新定义高端旅行的中等大小多功能星际飞船，同时还兼具足够的多功能属性来应对多种职能以及无法预见的任务。",
+    "weapon": [
+      {
+        "size": 3,
+        "num": 2,
+        "name": "机翼固定式火炮"
+      },
+      {
+        "size": 2,
+        "num": 2,
+        "name": "机鼻可动式炮台"
+      },
+      {
+          "size": 3,
+          "num": 1,
+          "name": "遥控炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "C型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [2S3 导弹]"
+      }
+    ],
+    "dimension": {
+      "x": 46.5,
+      "y": 43.5,
+      "z": 10
+    }
+  },
+  {
+    "name": "Galaxy",
+    "chinese_name": "银河",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 0,
+    "manufactory": "Roberts Space Industries",
+    "manufactory_chinese_name": "罗伯茨太空工业",
+    "size": 2,
+    "crewSize": 0,
+    "role": "模块化",
+    "description": "有着完全模块化设计以及一个能够部署小型飞船的船载机库，先进的银河将多功能性刻进了骨子里，可高度定制的主船舱能够配备各式设施来支持货运、医疗或者精炼作业。",
+    "weapon": [
+
+    ],
+    "shield": [
+
+    ],
+    "missile": [
+
+    ],
+    "dimension": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
   }
+
 ]

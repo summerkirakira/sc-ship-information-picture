@@ -1167,5 +1167,33 @@
         "photo_name": "Idris",
         "upgrade_name": "Idris-P",
         "ship_price": 125000
+    },
+    {
+        "local_name": "fake_a1 spirit",
+        "ship_name": "A1 Spirit",
+        "photo_name": "Spirit_A1",
+        "upgrade_name": "A1 Spirit",
+        "ship_price": 17500
+    },
+    {
+        "local_name": "fake_c1 spirit",
+        "ship_name": "C1 Spirit",
+        "photo_name": "Spirit_C1",
+        "upgrade_name": "C1 Spirit",
+        "ship_price": 11000
+    },
+    {
+        "local_name": "fake_e1 spirit",
+        "ship_name": "E1 Spirit",
+        "photo_name": "Spirit_E1",
+        "upgrade_name": "E1 Spirit",
+        "ship_price": 15000
+    },
+    {
+        "local_name": "fake_galaxy",
+        "ship_name": "Galaxy",
+        "photo_name": "Galaxy",
+        "upgrade_name": "Galaxy",
+        "ship_price": -1
     }
 ]
