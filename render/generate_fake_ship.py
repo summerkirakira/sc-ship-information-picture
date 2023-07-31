@@ -62,13 +62,13 @@ class FakeShip(BaseModel):
         sample_ship.data.vehicle.crewSize = self.crewSize
         sample_ship.data.vehicle.career = self.role
         sample_ship.localName = f"fake_{self.name.lower()}"
-        sample_ship.data.items.cargos.append(Ship.Data.Items.Cargo(**{
-            "data": {
-                "cargoGrid": {
-                    "scus": self.cargo
-                }
-            }
-        }))
+        # sample_ship.data.items.cargos.append(Ship.Data.Items.Cargo(**{
+        #     "data": {
+        #         "cargoGrid": {
+        #             "scus": self.cargo
+        #         }
+        #     }
+        # }))
 
         for weapon in self.weapon:
             for i in range(weapon.num):

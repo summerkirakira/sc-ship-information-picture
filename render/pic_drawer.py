@@ -134,6 +134,7 @@ class PicDrawer:
     class ComponentDrawer:
         def __init__(self, data: ComponentData, calculator: Calculator):
             self.default_font_path: pathlib.Path = pathlib.Path(__file__).parent / "data" / "fonts" / "WeiRuanYaHei.ttf"
+            self.secondary_font_path: pathlib.Path = pathlib.Path(__file__).parent / "data" / "fonts" / "Ruisu.TTF"
             self.default_font = ImageFont.truetype(str(self.default_font_path), size=55)
             self.width = 4961
             self.height = 2480
@@ -165,7 +166,7 @@ class PicDrawer:
             tile the background image
             :return:
             """
-            background_path = pathlib.Path(__file__).parent / "data" / "image" / "grey.gif"
+            background_path = pathlib.Path(__file__).parent / "data" / "image" / "blueprint.png"
             background = Image.open(str(background_path)).convert("RGBA")
             for x in range(0, self.width, background.width):
                 for y in range(0, self.height, background.height):
@@ -195,11 +196,11 @@ class PicDrawer:
                 description = ""
             description_list = description.split("\\n")
             if len(description_list) > 1:
-                description = description_list[-1]
+                description = "       " + description_list[-1]
             self.add_text_block(description, x=250, y=2000, width=2000, font=self.default_font)
 
         def add_chinese_name(self):
-            title_font = ImageFont.truetype(str(self.default_font_path), size=150)
+            title_font = ImageFont.truetype(str(self.secondary_font_path), size=150)
             if self.data.data.chineseName:
                 self.add_reversed_text(self.data.data.chineseName, x=4270, y=300, font=title_font)
             else:
@@ -207,8 +208,8 @@ class PicDrawer:
             pass
 
         def add_english_name(self):
-            title_font = ImageFont.truetype(str(self.default_font_path), size=100)
-            self.add_reversed_text(self.data.data.name, x=4270, y=500, font=title_font)
+            title_font = ImageFont.truetype(str(self.secondary_font_path), size=100)
+            self.add_reversed_text(self.data.data.name, x=4270, y=460, font=title_font)
             pass
 
         def add_general_type(self):
@@ -343,6 +344,8 @@ class PicDrawer:
             self.add_signature()
             self.save(pic_path)
             print(f"{self.data.data.chineseName} ({self.data.data.name}) saved")
+            # self.pic.show()
+            # raise NotImplementedError
 
         def save(self, pic_path: pathlib.Path):
             self.pic.save(str(pic_path / f"{self.data.data.ref}.png"))
@@ -852,6 +855,22 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         self.add_text_center(text, x=2890, y=2130, font=font)
         pass
 
+    def add_type(self):
+        font = ImageFont.truetype(str(self.default_font_path), size=110)
+        "change size number to roman numerals"
+        if self.data.isFlyable:
+            text = "可飞"
+        else:
+            text = "概念"
+        while font.getlength(text) > 470:
+            font = ImageFont.truetype(str(self.default_font_path), size=font.size - 1)
+        if self.data.isFlyable:
+            self.add_text_center(text, x=2895, y=1885, font=font, fill=(255, 140, 64))
+        else:
+            self.add_text_center(text, x=2895, y=1885, font=font, fill=(255, 140, 64))
+        pass
+
+
     def add_size_info(self):
         text = f"尺寸: {self.data.data.vehicle.size.x}米x{self.data.data.vehicle.size.y}米x{self.data.data.vehicle.size.z}米\n"
         text += f"乘员数量: {self.data.data.vehicle.crewSize}人"
@@ -891,6 +910,10 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
                                   (x, start_y - i * 250 - 15)),
                                  fill="white",
                                  width=5)
+        if len(shop_info.results) > 0:
+            shop_title_font = ImageFont.truetype(str(self.secondary_font_path), size=60)
+            self.add_reversed_text(f"游戏内购买地点", x=x, y=start_y - (len(shop_info.results) - 1) * 250 - 180, font=shop_title_font)
+
     def add_speed_info(self):
         if self.data.data.ifcs is None:
             return
@@ -901,20 +924,50 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         self.drawer.line(((1786, 1600), (1876, 1703)), fill="white", width=5)
 
     def add_details(self):
-        self.add_basic_info()
+        # self.add_basic_info()
+        self.add_qd_info()
         self.add_hull_info()
-        self.add_size_info()
+        # self.add_size_info()
         self.add_weapon_info()
         self.add_shield_info()
         self.add_missile_info()
-        self.add_speed_info()
+        # self.add_speed_info()
+        self.add_more_details()
+
+    def add_more_details(self):
+        font = ImageFont.truetype(str(self.secondary_font_path), size=30)
+
+        ifcs = self.data.data.ifcs
+        text = f"机动信息\n俯仰: {ifcs.angularVelocity.x}度/秒\n偏航: {ifcs.angularVelocity.z}度/秒\n滚转: {ifcs.angularVelocity.y}度/秒"
+
+        text += f"\n最大速度：{ifcs.maxSpeed}米/秒\n加力后速度：{ifcs.maxAfterburnSpeed}米/秒\n"
+        text += f"最大加力时间：{round(ifcs.afterburner.capacitorMax / ifcs.afterburner.capacitorAfterburnerIdleCost)}秒\n"
+
+        text += f"\n尺寸定位\n舰船尺寸：{self.data.data.vehicle.size.x}米x{self.data.data.vehicle.size.y}米x{self.data.data.vehicle.size.z}米\n"
+        text += f"舰船重量：{int(self.data.data.hull.mass / 1000)} 吨\n"
+        text += f"额定舰员：{self.data.data.vehicle.crewSize}人\n"
+        text += f"个人存储：{self.data.data.items.get_inventory_size()} SCU\n"
+
+        text += f"\n战斗信息\n"
+        if self.data.data.shield:
+            text += f"护盾类型：{self.data.data.shield.faceType}\n"
+        if self.data.data.weaponRegenPoolCrew:
+            text += f"机载电容量：{int(self.data.data.weaponRegenPoolCrew.ammoLoad)}\n"
+            text += f"机载电容回复：{int(self.data.data.weaponRegenPoolCrew.regenFillRate)}/秒\n"
+        if self.data.data.weaponRegenPoolTurret:
+            text += f"炮塔电容量：{int(self.data.data.weaponRegenPoolTurret.ammoLoad)}\n"
+            text += f"炮塔电容回复：{int(self.data.data.weaponRegenPoolTurret.regenFillRate)}/秒\n"
+
+        self.find_component("Turret")
+
+        self.drawer.text((110, 450), text, font=font)
 
     def add_missile_info(self):
-        font = ImageFont.truetype(str(self.default_font_path), size=70)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=70)
         text = "导弹系统"
         start_x = 2508
         current_y = 1418
-        self.drawer.text((start_x, current_y), text, font=font, fill=(255, 140, 64))
+        self.drawer.text((start_x, current_y + 14), text, font=font, fill=(255, 140, 64))
         current_y += 100
         self.drawer.line(((2260, 1389), (start_x, current_y)), fill=(255, 140, 64), width=5)
         self.drawer.line(((start_x, current_y), (start_x + 300, current_y)), fill=(255, 140, 64), width=5)
@@ -930,9 +983,9 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
                 if isinstance(turret.mount, MissileRack):
                     if turret.mount.data.ports is None:
                         continue
-                    turret_size_text = f"1S{turret.mount.data.size} " + text + '[' + convert_size_info([port.maxSize for port in turret.mount.data.ports]) + '导弹]'
+                    turret_size_text = f"1S{turret.mount.data.size} " + text + ' [' + convert_size_info([port.maxSize for port in turret.mount.data.ports]) + '导弹]'
                 else:
-                    turret_size_text = f"1S{turret.mount.data.size} " + text
+                    turret_size_text = f"1S{turret.mount.data.size}" + text
                 if turret_size_text[1:] in turrets_text_dict:
                     turrets_text_dict[turret_size_text[1:]] += int(turret_size_text[0])
                 else:
@@ -941,13 +994,15 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         for i, text in enumerate(turret_text_list):
             self.drawer.text((start_x, current_y), text, font=self.default_font, fill="white")
             current_y += 80
+        if len(turret_text_list) == 0:
+            self.drawer.text((start_x, current_y), "无导弹挂载", font=self.default_font, fill="white")
 
     def add_weapon_info(self):
-        font = ImageFont.truetype(str(self.default_font_path), size=70)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=70)
         text = "武器系统"
         start_x = 2480
         current_y = 520
-        self.drawer.text((start_x, current_y), text, font=font, fill=(255, 140, 64))
+        self.drawer.text((start_x, current_y + 10), text, font=title_font, fill=(255, 140, 64))
         self.drawer.line(((2247, 772), (2480, 614)), fill=(255, 140, 64), width=5)
         self.drawer.line(((2480, 614), (2783, 614)), fill=(255, 140, 64), width=5)
         current_y = 620
@@ -959,7 +1014,7 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
                 if turret.mount.data.chineseName is not None:
                     text = turret.mount.data.chineseName
                 else:
-                    text = f"S{turret.mount.data.size}挂点"
+                    text = turret.mount.data.name
                 if isinstance(turret.mount, Mount):
                     if turret.mount.data.ports is None:
                         turret_size_text = f"1S{turret.mount.data.size} " + text
@@ -1017,11 +1072,11 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
             current_y += 80
 
     def add_shield_info(self):
-        font = ImageFont.truetype(str(self.default_font_path), size=70)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=70)
         text = "护盾系统"
         start_x = 2540 + 300
         current_y = 980
-        self.drawer.text((start_x, current_y), text, font=font, fill=(255, 140, 64))
+        self.drawer.text((start_x, current_y + 14), text, font=title_font, fill=(255, 140, 64))
         current_y += 100
         self.drawer.line(((2247 + 300, 1019), (start_x, current_y)), fill=(255, 140, 64), width=5)
         self.drawer.line(((start_x, current_y), (start_x + 300, current_y)), fill=(255, 140, 64), width=5)
@@ -1044,53 +1099,90 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
             self.drawer.text((start_x, current_y), text, font=self.default_font, fill="white")
             current_y += 80
 
+
+    def add_qd_info(self):
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=70)
+        text = "量子引擎"
+        start_x = 2028
+        current_y = 1716
+        self.drawer.text((start_x, current_y + 14), text, font=title_font, fill=(255, 140, 64))
+        current_y += 100
+        self.drawer.line(((1900, 1720), (start_x, current_y)), fill=(255, 140, 64), width=6)
+        self.drawer.line(((start_x, current_y), (start_x + 300, current_y)), fill=(255, 140, 64), width=5)
+        # find turret
+        turrets = self.find_component("QuantumDrive")
+        turrets_text_dict = {}
+        for i, turret in enumerate(turrets):
+            if turret.mount is not None:
+                if turret.mount.data.chineseName is not None:
+                    text = turret.mount.data.chineseName
+                else:
+                    text = turret.mount.data.name
+                turret_size_text = f"1S{turret.mount.data.size} " + text
+                if turret_size_text[1:] in turrets_text_dict:
+                    turrets_text_dict[turret_size_text[1:]] += int(turret_size_text[0])
+                else:
+                    turrets_text_dict[turret_size_text[1:]] = int(turret_size_text[0])
+        turret_text_list = [str(value) + key for key, value in turrets_text_dict.items()]
+        for i, text in enumerate(turret_text_list):
+            self.drawer.text((start_x, current_y), text, font=self.default_font, fill="white")
+            current_y += 80
+
     def add_hp(self, hp: int):
         hp_icon = Image.open(str(icon_path / "hp_icon.png")).convert("RGBA")
         hp_icon = self.resize(hp_icon, 3)
         self.pic.paste(hp_icon, (200, 230), hp_icon)
-        font = ImageFont.truetype(str(self.default_font_path), size=110)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=40)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=84)
+        self.drawer.text((370, 320), "结构强度", font=title_font, fill="#ff4d4d")
         if hp >= 0:
-            self.drawer.text((340, 227), str(int(hp)), font=font, fill="#ff4d4d")
+            self.drawer.text((370, 240), str(int(hp)), font=font, fill="#ff4d4d")
         else:
-            self.drawer.text((340, 227), ' -', font=font, fill="#ff4d4d")
+            self.drawer.text((370, 240), ' -', font=font, fill="#ff4d4d")
 
     def add_quantum_fuel_info(self, quantum_fuel: int):
         quantum_fuel_icon = Image.open(str(icon_path / "quantum_fuel_icon.png")).convert("RGBA")
         quantum_fuel_icon = self.resize(quantum_fuel_icon, 1.5)
-        self.pic.paste(quantum_fuel_icon, (800, 230), quantum_fuel_icon)
-        font = ImageFont.truetype(str(self.default_font_path), size=110)
+        self.pic.paste(quantum_fuel_icon, (700, 230), quantum_fuel_icon)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=40)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=84)
+        self.drawer.text((840, 320), "量子燃料", font=title_font, fill=(95, 198, 161))
         if quantum_fuel >= 0:
-            self.drawer.text((940, 227), str(int(quantum_fuel)), font=font, fill=(95, 198, 161))
+            self.drawer.text((840, 240), str(int(quantum_fuel)), font=font, fill=(95, 198, 161))
         else:
-            self.drawer.text((940, 227), ' -', font=font, fill=(95, 198, 161))
+            self.drawer.text((840, 240), ' -', font=font, fill=(95, 198, 161))
 
     def add_fuel_info(self, fuel: int):
         fuel_icon = Image.open(str(icon_path / "fuel_icon.png")).convert("RGBA")
-        self.pic.paste(fuel_icon, (1350, 230), fuel_icon)
-        font = ImageFont.truetype(str(self.default_font_path), size=110)
+        self.pic.paste(fuel_icon, (1150, 230), fuel_icon)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=40)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=84)
+        self.drawer.text((1290, 320), "氢燃料", font=title_font, fill="#66ccff")
         if fuel >= 0:
-            self.drawer.text((1490, 227), str(int(fuel)), font=font, fill="#66ccff")
+            self.drawer.text((1290, 240), str(int(fuel)), font=font, fill="#66ccff")
         else:
-            self.drawer.text((1490, 227), ' -', font=font, fill="#66ccff")
+            self.drawer.text((1290, 240), ' -', font=font, fill="#66ccff")
 
     def add_cargo_info(self, cargo: int):
         cargo_icon = Image.open(str(icon_path / "hull_icon.png")).convert("RGBA")
         cargo_icon = self.resize(cargo_icon, 3)
-        self.pic.paste(cargo_icon, (2000, 230), cargo_icon)
-        font = ImageFont.truetype(str(self.default_font_path), size=110)
+        self.pic.paste(cargo_icon, (1700, 230), cargo_icon)
+        title_font = ImageFont.truetype(str(self.secondary_font_path), size=40)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=84)
+        self.drawer.text((1850, 320), "货仓", font=title_font, fill="#ff9900")
         if cargo >= 0:
-            self.drawer.text((2150, 227), str(int(cargo)), font=font, fill="#3365ff")
+            self.drawer.text((1850, 240), str(int(cargo)), font=font, fill="#ff9900")
         else:
-            self.drawer.text((2150, 227), ' -', font=font, fill="#3365ff")
+            self.drawer.text((1850, 240), ' -', font=font, fill="#ff9900")
 
     def add_price_info(self, price: int):
         # get length of price text
         if price < 0:
             return
-        font = ImageFont.truetype(str(self.default_font_path), size=150)
+        font = ImageFont.truetype(str(self.secondary_font_path), size=150)
         self.add_reversed_text(f"${int(price / 100)}",
                                x=4270,
-                               y=650,
+                               y=580,
                                font=font, fill=(255, 140, 64))
 
     def add_hull_info(self):
@@ -1100,10 +1192,11 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         self.add_hp(hp)
         self.add_quantum_fuel_info(int(self.data.data.qtFuelCapacity))
         self.add_fuel_info(int(self.data.data.fuelCapacity))
-        cargo_size = 0
-        for cargo in self.data.data.items.cargos:
-            if cargo.data.cargoGrid is not None:
-                cargo_size += cargo.data.cargoGrid.scus
+        # cargo_size = 0
+        # for cargo in self.data.data.items.cargos:
+        #     if cargo.data.cargoGrid is not None:
+        #         cargo_size += cargo.data.cargoGrid.scus
+        cargo_size = self.data.data.cargo
         self.add_cargo_info(int(cargo_size))
         binding = get_binding_by_local_name(self.data.localName)
         if binding is not None:
@@ -1146,30 +1239,30 @@ if __name__ == '__main__':
     ship_data = calculator.ships + load_fake_ship()
 
     for ship in ship_data:
-        try:
-            ship_drawer = ShipDrawer(ship, calculator)
-            ship_drawer.draw(pathlib.Path("test/"))
-        except Exception as e:
-            print(f"{ship.data.chineseName}({ship.localName}) 生成失败")
-            logging.exception(e)
-            continue
+        # try:
+        ship_drawer = ShipDrawer(ship, calculator)
+        ship_drawer.draw(pathlib.Path("test/"))
+        # except Exception as e:
+        #     print(f"{ship.data.chineseName}({ship.localName}) 生成失败")
+        #     logging.exception(e)
+        #     continue
 
-    for i, weapon in enumerate(calculator.weapons):
-        component_drawer = WeaponDrawer(weapon, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
-    for i, shield in enumerate(calculator.shields):
-        component_drawer = ShieldDrawer(shield, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
-    for i, missile in enumerate(calculator.missiles):
-        component_drawer = MissileDrawer(missile, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
-    for i, emp in enumerate(calculator.emps):
-        component_drawer = EMPDrawer(emp, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
-    for i, power_plant in enumerate(calculator.power_plants):
-        component_drawer = PowerPlantDrawer(power_plant, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
-    for i, qdrive in enumerate(calculator.qdrives):
-        component_drawer = QDriveDrawer(qdrive, calculator)
-        component_drawer.draw(pathlib.Path("test/"))
+    # for i, weapon in enumerate(calculator.weapons):
+    #     component_drawer = WeaponDrawer(weapon, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
+    # for i, shield in enumerate(calculator.shields):
+    #     component_drawer = ShieldDrawer(shield, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
+    # for i, missile in enumerate(calculator.missiles):
+    #     component_drawer = MissileDrawer(missile, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
+    # for i, emp in enumerate(calculator.emps):
+    #     component_drawer = EMPDrawer(emp, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
+    # for i, power_plant in enumerate(calculator.power_plants):
+    #     component_drawer = PowerPlantDrawer(power_plant, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
+    # for i, qdrive in enumerate(calculator.qdrives):
+    #     component_drawer = QDriveDrawer(qdrive, calculator)
+    #     component_drawer.draw(pathlib.Path("test/"))
 

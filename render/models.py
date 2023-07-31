@@ -638,11 +638,40 @@ class Ship(ComponentData):
             class Cargo(BaseModel):
                 class Data(BaseModel):
                     class CargoGrid(BaseModel):
-                        scus: float
+                        class Inventory(BaseModel):
+                            class Data(BaseModel):
+                                class MaxPermittedItemSize(BaseModel):
+                                    x: float
+                                    y: float
+                                    z: float
+
+                                maxPermittedItemSize: Optional[MaxPermittedItemSize]
+
+                                class InteriorDimensions(BaseModel):
+                                    x: float
+                                    y: float
+                                    z: float
+                                interiorDimensions: InteriorDimensions
+
+                            data: Data
+
+                        inventory: Optional[Inventory]
 
                     cargoGrid: Optional[CargoGrid]
+                    type: str
                 data: Data
             cargos: list[Cargo]
+
+            def get_inventory_size(self) -> float:
+                size: float = 0.0
+                for cargo in self.cargos:
+                    if cargo.data.cargoGrid:
+                        if cargo.data.type == "Cargo":
+                            size += cargo.data.cargoGrid.inventory.data.interiorDimensions.x * \
+                                    cargo.data.cargoGrid.inventory.data.interiorDimensions.y * \
+                                    cargo.data.cargoGrid.inventory.data.interiorDimensions.z
+
+                return size
 
         loadout: list[Loadout]
         ifcs: Optional[Ifcs] = None
@@ -665,7 +694,6 @@ class Ship(ComponentData):
 
             size: Size
             inventory: str
-            inventoryCapacity: float
 
         vehicle: Vehicle
 
@@ -698,6 +726,14 @@ class Ship(ComponentData):
             respectsCapacitorAssignments: bool
 
         weaponRegenPoolCrew: Optional[WeaponRegenPoolCrew]
+
+        class WeaponRegenPoolTurret(BaseModel):
+            regenFillRate: float
+            ammoLoad: float
+            respectsCapacitorAssignments: bool
+
+        weaponRegenPoolTurret: Optional[WeaponRegenPoolTurret]
+
         chineseTypeName = "舰船"
 
         cargo: float
@@ -710,9 +746,10 @@ class Ship(ComponentData):
 
     data: Data
     isFlyable: bool = False
-    alias = list[str]
-    cirno_id: int
-    skus: list[Sku] = []
+    loanerShips: list[str] = []
+    # alias = list[str]
+    # cirno_id: int
+    # skus: list[Sku] = []
 
 
 class ShopSearch(BaseModel):

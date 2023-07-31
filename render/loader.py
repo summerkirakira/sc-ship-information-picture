@@ -1,7 +1,7 @@
 from models import Missile, Bomb, Shield, Weapon, Cooler, EMP, MiningLaser, Mount, PowerPlant, QDrive, Qed, Utility, Paint, MissileRack, Ship, Shop, ComponentData, Archive
 import json
 import pathlib
-from typing import Callable
+from typing import Callable, Optional
 from translation import Translation
 
 
@@ -25,6 +25,7 @@ class Loader:
         self.missile_rack_path = pathlib.Path(__file__).parent / "data" / "missile_racks.json"
         self.archive_path = pathlib.Path(__file__).parent / "data" / "archive.json"
         self.localization_path = pathlib.Path(__file__).parent / "data" / "global.ini"
+        self.loaner_path = pathlib.Path(__file__).parent / "data" / "loaner_ships.json"
 
         self.missiles: list[Missile] = []
         self.shops: list[Shop] = []
@@ -212,6 +213,33 @@ class Loader:
         self.utilities = self.load_utilities()
         self.paints = self.load_paints()
         self.missile_racks = self.load_missile_racks()
+        # self.match_loaner_ships()
+
+    def find_ship_by_name(self, name: str) -> Optional[Ship]:
+        for ship in self.ships:
+            if ship.data.name == name:
+                return ship
+        input(f"找不到{name}的借用船, 请输入借用船名称，跳过请按输入q:")
+        if name == "q":
+            return None
+        else:
+            for ship in self.ships:
+                if ship.data.name == name:
+                    return ship
+        return None
+
+    def match_loaner_ships(self):
+        with open(self.loaner_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for ship_name in data:
+            loaner_ship = self.find_ship_by_name(ship_name)
+            if loaner_ship is None:
+                continue
+            for loaned_ship_name in data[ship_name]:
+                loaned_ship = self.find_ship_by_name(loaned_ship_name)
+                if loaned_ship is None:
+                    continue
+                loaner_ship.loanerShips.append(loaned_ship.data.name)
 
     def save_all(self):
         archive = Archive(
