@@ -347,7 +347,7 @@ class PicDrawer:
             # raise NotImplementedError
 
         def save(self, pic_path: pathlib.Path):
-            self.pic.save(str(pic_path / f"{self.data.data.name}.png"))
+            self.pic.resize((int(self.pic.width * 0.7), int(self.pic.height * 0.7))).save(str(pic_path / f"{self.data.data.name}.png"))
 
         @classmethod
         def resize(cls, image: Image, ratio: float) -> Image:
@@ -1247,14 +1247,14 @@ if __name__ == '__main__':
     ship_data = calculator.ships + load_fake_ship()
     # ship_data = load_fake_ship()
 
-    # for ship in ship_data:
-    #     # try:
-    #     ship_drawer = ShipDrawer(ship, calculator)
-    #     ship_drawer.draw(pathlib.Path("test/"))
+    for ship in ship_data:
+        # try:
+        ship_drawer = ShipDrawer(ship, calculator)
+        ship_drawer.draw(pathlib.Path("test/"))
 
-    ship_group = ShipGroup()
-    ship_group.add_ships(ship_data)
-    ship_group.save_all()
+    # ship_group = ShipGroup()
+    # ship_group.add_ships(ship_data)
+    # ship_group.save_all()
 
 
         # raise Exception

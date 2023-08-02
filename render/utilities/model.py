@@ -836,6 +836,7 @@ class ShipGroup(BaseModel):
         manufacturer: str
         price: Optional[int] = None
         chinese_name: str
+        photo_name: str
         alias: list[str] = []
         ship: Ship
 
@@ -852,7 +853,7 @@ class ShipGroup(BaseModel):
 
     @staticmethod
     def get_binding_by_local_name(local_name: str) -> Optional[ShipNameBinding]:
-        ship_name_binding_path = pathlib.Path(__file__).parent / "data" / "ship_name_binding.json"
+        ship_name_binding_path = pathlib.Path(__file__).parent / "ship_name_binding.json"
 
         with open(ship_name_binding_path, 'r') as f:
             data = json.load(f)
@@ -876,7 +877,8 @@ class ShipGroup(BaseModel):
                 price=upgrade_binding.ship_price,
                 chinese_name=ship.data.chineseName,
                 series=None,
-                ship=ship
+                ship=ship,
+                photo_name=upgrade_binding.photo_name
             )
         )
 
@@ -893,3 +895,33 @@ class ShipGroup(BaseModel):
                 else:
                     ship.series = series_name
                 self.save_all()
+
+    def add_aliases(self):
+        with open("alias.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for ship_name in data:
+            is_find = False
+            for ship in self.ships:
+                if ship.name in ship_name:
+                    user_input = input(f"即将为{ship.chinese_name}({ship.name})添加别名{ship_name}, 确认请输入y: ")
+                    if user_input == "y":
+                        ship.alias += data[ship_name]
+                        self.save_all()
+                        is_find = True
+                        break
+            if not is_find:
+                print(f"未找到{ship_name}")
+                user_input = input("请输入该舰船的localName: ")
+                for ship in self.ships:
+                    if ship.ship.localName == user_input:
+                        ship.alias += data[ship_name]
+                        self.save_all()
+                        break
+
+    def add_alias(self, local_name: str, alias: str):
+        for ship in self.ships:
+            if ship.local_name == local_name:
+                ship.alias.append(alias)
+                self.save_all()
+                break
+
