@@ -1,13 +1,10 @@
 from PIL import Image, ImageDraw, ImageFont
-from models import Sheet, ComponentData, Weapon, SearchItem, Weapon, Shield, Missile, EMP, PowerPlant, QDrive, Ship, ShipNameBinding, Mount, MissileRack
+from models import Sheet, ComponentData, Weapon, SearchItem, Weapon, Shield, Missile, EMP, PowerPlant, QDrive, Ship, ShipNameBinding, Mount, MissileRack, ShipGroup
 from translation import Translation
 from calculator import Calculator
 import pathlib
-import logging
 import abc
 from generate_fake_ship import load_fake_ship
-from pathlib import Path
-from typing import Union
 from typing import Optional
 import json
 
@@ -1250,10 +1247,16 @@ if __name__ == '__main__':
     ship_data = calculator.ships + load_fake_ship()
     # ship_data = load_fake_ship()
 
-    for ship in ship_data:
-        # try:
-        ship_drawer = ShipDrawer(ship, calculator)
-        ship_drawer.draw(pathlib.Path("test/"))
+    # for ship in ship_data:
+    #     # try:
+    #     ship_drawer = ShipDrawer(ship, calculator)
+    #     ship_drawer.draw(pathlib.Path("test/"))
+
+    ship_group = ShipGroup()
+    ship_group.add_ships(ship_data)
+    ship_group.save_all()
+
+
         # raise Exception
         # except Exception as e:
         #     print(f"{ship.data.chineseName}({ship.localName}) 生成失败")

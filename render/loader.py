@@ -290,3 +290,5 @@ class Loader:
 if __name__ == "__main__":
     is_debug = True
     loader = Loader()
+    a = 1
+

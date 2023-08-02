@@ -1,7 +1,12 @@
 from pydantic import BaseModel, validator
 from typing import Optional, Union
 from thefuzz import process
+import pathlib
+import json
 
+current_path = pathlib.Path(__file__).parent
+
+ship_info_path = current_path / "ship_group.json"
 
 class ManufacturerData(BaseModel):
 
@@ -817,3 +822,66 @@ class Archive(BaseModel):
     utilities: list[Utility]
     paints: list[Paint]
     missile_racks: list[MissileRack]
+
+
+class ShipGroup(BaseModel):
+    class ShipInfo(BaseModel):
+        manufacturer: str
+        series: Optional[str]
+        local_name: str
+        name: str
+        description: Optional[str]
+        upgrade_name: str
+        alias: list[str]
+        manufacturer: str
+        price: Optional[int] = None
+        chinese_name: str
+        alias: list[str] = []
+        ship: Ship
+
+    ships: list[ShipInfo] = []
+
+    def save_all(self):
+        with open(ship_info_path.absolute(), "w", encoding="utf-8") as f:
+            f.write(self.json(indent=4, ensure_ascii=False))
+
+    def load_all(self):
+        with open(ship_info_path.absolute(), "r", encoding="utf-8") as f:
+            data = json.load(f)
+            self.ships = [ShipGroup.ShipInfo(**d) for d in data]
+
+    @staticmethod
+    def get_binding_by_local_name(local_name: str) -> Optional[ShipNameBinding]:
+        ship_name_binding_path = pathlib.Path(__file__).parent / "data" / "ship_name_binding.json"
+
+        with open(ship_name_binding_path, 'r') as f:
+            data = json.load(f)
+            ship_name_binding = [ShipNameBinding(**d) for d in data]
+
+        for binding in ship_name_binding:
+            if binding.local_name == local_name:
+                return binding
+        return None
+
+    def add_ship(self, ship: Ship):
+        upgrade_binding = self.get_binding_by_local_name(ship.localName)
+        self.ships.append(
+            ShipGroup.ShipInfo(
+                local_name=ship.localName,
+                name=ship.data.name,
+                description=ship.data.chineseDescription,
+                upgrade_name=upgrade_binding.upgrade_name,
+                alias=[],
+                manufacturer=ship.data.manufacturerData.data.name,
+                price=upgrade_binding.ship_price,
+                chinese_name=ship.data.chineseName,
+                series=None,
+                ship=ship
+            )
+        )
+
+    def add_ships(self, ships: list[Ship]):
+        for ship in ships:
+            self.add_ship(ship)
+
+
