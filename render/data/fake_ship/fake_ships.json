@@ -34,6 +34,13 @@
     ],
     "missile": [
     ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
     "dimension": {
       "x": 270,
       "y": 64,
@@ -81,6 +88,13 @@
         "size": 4,
         "num": 1,
         "name": "C型护盾发生器"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
       }
     ],
     "missile": [
@@ -146,6 +160,13 @@
         "name": "\"荒凉者\" 反主力舰鱼雷发射器 [16S12导弹]"
       }
     ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
     "dimension": {
       "x": 480,
       "y": 198,
@@ -190,6 +211,13 @@
           "size": 3,
           "num": 2,
           "name": "导弹架 [2S2 导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
       }
     ],
     "dimension": {
@@ -253,6 +281,13 @@
           "name": "导弹架 [2S2 导弹]"
       }
     ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
     "dimension": {
       "x": 54,
       "y": 52,
@@ -300,6 +335,13 @@
     "missile": [
 
     ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
     "dimension": {
       "x": 233,
       "y": 126,
@@ -356,6 +398,13 @@
         "name": "反舰导弹发射器 [10S5 导弹]"
       }
     ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
     "dimension": {
       "x": 233,
       "y": 126,
@@ -410,6 +459,13 @@
         "size": 8,
         "num": 1,
         "name": "反舰导弹发射器 [10S5 导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
       }
     ],
     "dimension": {
@@ -453,7 +509,7 @@
       {
         "size": 2,
         "num": 1,
-        "name": "C型护盾生成器"
+        "name": "M型护盾生成器"
       }
     ],
     "missile": [
@@ -466,6 +522,13 @@
         "size": 5,
         "num": 2,
         "name": "花冠炸弹架 [5S5 炸弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
       }
     ],
     "dimension": {
@@ -509,7 +572,7 @@
       {
         "size": 2,
         "num": 1,
-        "name": "C型护盾生成器"
+        "name": "M型护盾生成器"
       }
     ],
     "missile": [
@@ -517,6 +580,13 @@
         "size": 4,
         "num": 2,
         "name": "导弹架 [2S3 导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
       }
     ],
     "dimension": {
@@ -560,7 +630,7 @@
       {
         "size": 2,
         "num": 1,
-        "name": "C型护盾生成器"
+        "name": "M型护盾生成器"
       }
     ],
     "missile": [
@@ -568,6 +638,13 @@
         "size": 4,
         "num": 2,
         "name": "导弹架 [2S3 导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
       }
     ],
     "dimension": {
@@ -583,7 +660,7 @@
     "quantum_fuel": -1,
     "fuel": -1,
     "mass": -1,
-    "cargo": 0,
+    "cargo": 64,
     "manufactory": "Roberts Space Industries",
     "manufactory_chinese_name": "罗伯茨太空工业",
     "size": 2,
@@ -591,19 +668,1445 @@
     "role": "模块化",
     "description": "有着完全模块化设计以及一个能够部署小型飞船的船载机库，先进的银河将多功能性刻进了骨子里，可高度定制的主船舱能够配备各式设施来支持货运、医疗或者精炼作业。",
     "weapon": [
+      {
+        "size": 6,
+        "num": 3,
+        "name": "炮塔 [2S5机炮]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L型护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "导弹架 [4S2 导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 110,
+      "y": 60,
+      "z": 22
+    }
+  },
+  {
+    "name": "Apollo Medivac",
+    "chinese_name": "阿波罗 医务室",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 3765000,
+    "cargo": 28,
+    "manufactory": "Roberts Space Industries",
+    "manufactory_chinese_name": "罗伯茨太空工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "医疗",
+    "description": "2948年的阿波罗医务室版不仅拥有出色的装甲和双导弹架，还向经典的2910电影《Astromedics：绝处逢生》致敬，其涂装准确地再现了Kithara的经典设计。",
+    "weapon": [
 
     ],
     "shield": [
+      {
+        "size":2,
+        "num": 2,
+        "name": "M级护盾发生器"
+      }
 
     ],
     "missile": [
 
     ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
+      }
+    ],
     "dimension": {
-      "x": 0,
-      "y": 0,
-      "z": 0
+      "x": 43,
+      "y": 30,
+      "z": 10
+    }
+  },
+  {
+    "name": "Apollo Triage",
+    "chinese_name": "阿波罗 分诊台",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 3765000,
+    "cargo": 28,
+    "manufactory": "Roberts Space Industries",
+    "manufactory_chinese_name": "罗伯茨太空工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "医疗",
+    "description": "罗伯茨太空工业具有传奇色彩的阿波罗分诊台版是急救飞船和快速应急响应的金牌标准，在两个多世纪以来一直在已知的宇宙内提供关键性的救援。",
+    "weapon": [
+
+    ],
+    "shield": [
+      {
+        "size":2,
+        "num": 2,
+        "name": "M级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "M级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 43,
+      "y": 30,
+      "z": 10
+    }
+  },
+  {
+    "name": "Crucible",
+    "chinese_name": "坩埚",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 3650500,
+    "cargo": 230,
+    "manufactory": "Anvil Aerospace",
+    "manufactory_chinese_name": "铁砧航天",
+    "size": 2,
+    "crewSize": 3,
+    "role": "维修",
+    "description": "坩埚是铁砧航天第一艘专业修理舰，别称飞行的工具箱。坩埚配备有一个可旋转的舰桥和一个可分离的恒压工作区，装有修理手臂，无人机控制中心以及其他一切能让一艘受损飞船成功恢复战斗状态所需的设备。",
+    "weapon": [
+      {
+        "size":4,
+        "num": 1,
+        "name": "人工炮台"
+      },
+      {
+        "size":4,
+        "num": 1,
+        "name": "维修工具"
+      }
+    ],
+    "shield": [
+      {
+        "size":3,
+        "num": 1,
+        "name": "L级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 90,
+      "y": 50,
+      "z": 20
+    }
+  },
+  {
+    "name": "Endeavor",
+    "chinese_name": "武藏 奋进",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 4055000,
+    "cargo": 500,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 3,
+    "role": "科研",
+    "description": "武藏工业与星航株式会社隆重介绍奋进级科研舰船，这个完全模块化的太空平台设计可改装用于多项科研与医疗任务。武藏奋进最初作为浮动实验室而开发，可被用作太空望远镜乃至移动医院。",
+    "weapon": [
+      {
+        "size":5,
+        "num": 1,
+        "name": "人工炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":3,
+        "num": 2,
+        "name": "L级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 200,
+      "y": 48,
+      "z": 20
+    }
+  },
+  {
+    "name": "Hull C",
+    "chinese_name": "货轮C",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 886930,
+    "cargo": 4608,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 3,
+    "role": "货运",
+    "description": "货轮C通常被称为银河系中最常见的飞船，是该系列中生产最多，并被人们认为是应用范围最广的货船。 货轮C确保其处在了更小的单人货船和巨型超级货轮之间的那个“舒适点”上，从而补足了货轮系列之间的空缺。 作为一艘变形式模块化大型飞船，货轮C仍然保留了一定的灵活性，使其能到达更低的范围。",
+    "weapon": [
+      {
+        "size":3,
+        "num": 1,
+        "name": "人工炮台"
+      },
+      {
+        "size":2,
+        "num": 3,
+        "name": "人工炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":3,
+        "num": 2,
+        "name": "L级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 125,
+      "y": 55,
+      "z": 55
+    }
+  },
+  {
+    "name": "Hull D",
+    "chinese_name": "货轮D",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1216000,
+    "cargo": 20736,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 5,
+    "role": "货运",
+    "description": "Model D of the MISC cargo Hull series is the powerhouse of freighter ingenuity. This fourth iteration features a wide range of cargo configurations, making it the ideal ship for hauling large cargo to your destination. With massive engines and hearty defences, the Hull D will get you to your delivery point on time and intact.",
+    "weapon": [
+      {
+        "size":4,
+        "num": 2,
+        "name": "人工炮台"
+      },
+      {
+        "size":3,
+        "num": 6,
+        "name": "人工炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":4,
+        "num": 2,
+        "name": "C级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 209,
+      "y": 70,
+      "z": 70
+    }
+  },
+  {
+    "name": "Hull E",
+    "chinese_name": "货轮E",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1216000,
+    "cargo": 98304,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 5,
+    "role": "货运",
+    "description": "MISC's Hull E is the big fish in this cargo Hull series. With its unparalleled capacity and immense adaptive structure, it can dominate any transport job. Large and extremely diverse, the MISC Hull E provides the hauling strength and defensive power any captain could dream of. If it's a big job the Hull E will get it done.",
+    "weapon": [
+      {
+        "size":5,
+        "num": 2,
+        "name": "人工炮台"
+      },
+      {
+        "size":3,
+        "num": 6,
+        "name": "人工炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":4,
+        "num": 2,
+        "name": "C级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 372,
+      "y": 104,
+      "z": 104
+    }
+  },
+  {
+    "name": "Odyssey",
+    "chinese_name": "奥德赛",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1216000,
+    "cargo": 252,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 5,
+    "role": "探索",
+    "description": "驾驶科技最先进与设备最完备的民用探索飞船武藏奥德赛，来勘探遥远的边疆以及探索太空最边缘的前沿。设计上拥有超强的自给自足能力，奥德赛配备有内置采矿技术的船上精炼设施、大量运输补给品的空间，以及一个能够运载小型飞船的机库；同时还为7名船员准备有完备舒适的居住空间。",
+    "weapon": [
+      {
+        "size":5,
+        "num": 2,
+        "name": "遥控炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":4,
+        "num": 2,
+        "name": "C级护盾发生器"
+      }
+
+    ],
+    "missile": [
+      {
+        "size":3,
+        "num": 4,
+        "name": "导弹架"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 4,
+        "num": 1,
+        "name": "C级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 140,
+      "y": 90,
+      "z": 35
+    }
+  },
+  {
+    "name": "G12",
+    "chinese_name": "G12",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 2160,
+    "cargo": 2,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "旅游",
+    "description": "行遍星河无所虑，起源品质传妙绪。为极端条件而生，不论何种星球旅行，穿越苔原抑或游历观光，G12都游刃有余。",
+    "weapon": [
+      {
+        "size":1,
+        "num": 1,
+        "name": "遥控炮台 [2S1机枪]"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 7.25,
+      "y": 5.8,
+      "z": 2.75
+    }
+  },
+  {
+    "name": "G12a",
+    "chinese_name": "G12a",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 2160,
+    "cargo": 0,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "战斗",
+    "description": "G12a，起源独家的高端工程技术与军事力量的结合。 为所有进攻性地面作战而设计，G12a是您远距边界巡逻，拦截攻击者和探索危险新地带的理想伙伴。",
+    "weapon": [
+      {
+        "size":1,
+        "num": 1,
+        "name": "多功能工具"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [
+       {
+        "size":0,
+        "num": 1,
+        "name": "导弹架 [8S2]"
+      }
+    ],
+    "qdrive": [],
+    "dimension": {
+      "x": 7.25,
+      "y": 5.8,
+      "z": 2.75
+    }
+  },
+  {
+    "name": "G12r",
+    "chinese_name": "G12r",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 2160,
+    "cargo": 0,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "竞速",
+    "description": "回归本源，只为极致性能。起源将细致入微的设计与调教350r和M50中学到的一切相融合，并用在无处不在的地面赛车G12r上。更轻，更快，内置自卫用EMP，不论外界有什么艰难险阻，它都有备而来。",
+    "weapon": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "EMP发射器"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 7.25,
+      "y": 5.8,
+      "z": 2.75
+    }
+  },
+  {
+    "name": "Orion",
+    "chinese_name": "猎户座",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 26496000,
+    "cargo": 384,
+    "manufactory": "Robert Space Industries",
+    "manufactory_chinese_name": "罗伯特太空工业",
+    "size": 2,
+    "crewSize": 1,
+    "role": "采矿",
+    "description": "RSI的终身目标就是让每个公民都能开采这些星球。现在，借助RSI猎户座采矿平台，RSI允许个人接手以前需要由大型公司才能控制的采矿流程。猎户座的功能包括高级云台挂点上的牵引阵列，大量矿物质存储仓库以及由极光系列和星座系列的设计团队为您带来的的机舱。列出的货物容量仅包含专用的货物室，并未计算存储吊舱中已开采的矿物容量。",
+    "weapon": [
+      {
+        "size":5,
+        "num": 2,
+        "name": "载人炮台"
+      },
+      {
+        "size":2,
+        "num": 1,
+        "name": "中型多功能工具"
+      }
+    ],
+    "shield": [
+      {
+        "size":3,
+        "num": 1,
+        "name": "L级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size":3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 340,
+      "y": 100,
+      "z": 100
+    }
+  },
+  {
+    "name": "X1",
+    "chinese_name": "X1",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1610,
+    "cargo": 0,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "旅游",
+    "description": "起源跃动生产的高性能敞篷载具X1将带你领略次世代。以轻便的高分子聚合物打造，无缝内置的引擎科技以及接合式矢量推进器的布局，让X1将速度和敏捷推向了新的高度。创新设计与高质量工艺共同打造出了其独一无二的飞行体验。",
+    "weapon": [
+      {
+        "size":1,
+        "num": 1,
+        "name": "M3A 激光加农炮"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 5.5,
+      "y": 1.3,
+      "z": 1.5
+    }
+  },
+  {
+    "name": "X1 Force",
+    "chinese_name": "X1 力量",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1682,
+    "cargo": 0,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "战斗",
+    "description": "为优雅地耐受严苛环境而造，X1武装是X1基础型号的改装版本，额外的防御设备让这辆快速灵敏的敞篷摩托更强力，无论是探索世界还是安保渗透任务，它可以胜任大量不同的职能。",
+    "weapon": [
+      {
+        "size":1,
+        "num": 1,
+        "name": "CF-117\"恶犬\"激光速射炮"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 5.5,
+      "y": 1.3,
+      "z": 1.5
+    }
+  },
+  {
+    "name": "X1 Velocity",
+    "chinese_name": "X1 速度",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1528,
+    "cargo": 0,
+    "manufactory": "Origin Jumpworks",
+    "manufactory_chinese_name": "起源跃动",
+    "size": 2,
+    "crewSize": 1,
+    "role": "竞速",
+    "description": "要怎么才能比快还快？起源跃动的X1竞速大胆挑战速度极限，将X1基础型抽丝剥茧只留下核心部件，去掉了武器挂点并且整合了新型Syntek合成材料，全方位减重造就了更轻的车体。",
+    "weapon": [],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 5.5,
+      "y": 1.3,
+      "z": 1.5
+    }
+  },
+  {
+    "name": "Hull B",
+    "chinese_name": "货轮B",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 387500,
+    "cargo": 384,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 5,
+    "role": "货运",
+    "description": "The MISC Hull B is medium-sized cargo vessel that sits roughly halfway between the Constellation Taurus and the Caterpillar in terms of hauling capacity. Although the Hull B is known for being quite rugged, it is a pure cargo transport and thus not suited for most other roles. The Hull B is used by corporations and Citizens alike in large numbers, and it is not uncommon to spot several in different liveries during a single flight.",
+    "weapon": [
+      {
+        "size":2,
+        "num": 2,
+        "name": "遥控炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size":2,
+        "num": 1,
+        "name": "M级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 49,
+      "y": 15.5,
+      "z": 17
+    }
+  },
+  {
+    "name": "Genesis Starliner",
+    "chinese_name": "十字军 创世纪 星航",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": -1,
+    "cargo": 300,
+    "manufactory": "Crusader Industries",
+    "manufactory_chinese_name": "十字军工业",
+    "size": 2,
+    "crewSize": 2,
+    "role": "客运",
+    "description": "创世纪是十字军工业引以为豪的运输船设计历史上，又一个重大里程碑。这艘飞船运用获奖无数的制造工艺以及品质最佳的部件来打造出这样一个东西：一艘您钱包能够负担的次世代客运飞船",
+    "weapon": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "载人炮台"
+      }
+    ],
+    "shield": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L型护盾生成器"
+      }
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 85,
+      "y": 90,
+      "z": 16
+    }
+  },
+  {
+    "name": "Polaris",
+    "chinese_name": "北极星",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 17155000,
+    "cargo": 28,
+    "manufactory": "Roberts Space Industries",
+    "manufactory_chinese_name": "罗伯茨太空工业",
+    "size": 2,
+    "crewSize": 6,
+    "role": "战斗",
+    "description": "北极星是一艘灵活的轻护卫舰级别的主力舰，满载的炮雷武装能对敌人造成有力的一击！ 作为海军巡逻船和民兵行动的旗舰，北极星能够执行搜救行动、轻快打击任务和进行常规巡防的能力。 北极星备有对一架战斗机，轻型轰炸机或支援船进行维修、再装弹和加油的设施。",
+    "weapon": [
+      {
+        "size": 5,
+        "num": 1,
+        "name": "遥控炮台 [2S5机炮]"
+      },
+      {
+        "size": 4,
+        "num": 5,
+        "name": "人工炮台 [2S4机炮]"
+      },
+      {
+        "size": 4,
+        "num": 1,
+        "name": "人工炮台 [2S4机炮]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 4,
+        "num": 2,
+        "name": "C级护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 10,
+        "num": 4,
+        "name": "导弹架 [7S10]"
+      },
+      {
+        "size": 3,
+        "num": 2,
+        "name": "导弹架 [16S2]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 155,
+      "y": 82,
+      "z": 35
+    }
+  },
+  {
+    "name": "Pioneer",
+    "chinese_name": "开拓者",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 35600000,
+    "cargo": 600,
+    "manufactory": "Consolidated Outland",
+    "manufactory_chinese_name": "联合外域",
+    "size": 2,
+    "crewSize": 8,
+    "role": "建造",
+    "description": "在野马的盛大亮相之后，联合外域又揭下开拓者的面纱，让游戏规则再次改变。这个自给自足的移动式建造厂能够在星球表面创造模组化结构建筑，引领有抱负的新殖民者在边陲定制他们的新家。",
+    "weapon": [
+      {
+        "size": 6,
+        "num": 4,
+        "name": "TBC畸变炮"
+      },
+      {
+        "size": 4,
+        "num": 2,
+        "name": "人工炮台 [1S4机炮]"
+      },
+      {
+        "size": 4,
+        "num": 2,
+        "name": "遥控炮台 [1S4机炮]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 3,
+        "num": 6,
+        "name": "L级护盾生成器"
+      }
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 200,
+      "y": 125,
+      "z": 30
+    }
+  },
+  {
+    "name": "Vulcan",
+    "chinese_name": "火神",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 625330,
+    "cargo": 12,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 3,
+    "role": "维修",
+    "description": "加油，维修，重新武装。购买圣盾动力的多功能船火神号来成为一个独立的后勤人员吧，为飞行中的驾驶员提供紧急救助。 不管是在猛烈的火力压制下需要弹药，或在计划不周的跳跃之后缺少量子燃料，还是由于推进器的损坏而在未知的太空搁浅，遇险的飞行员总是可以指望火神和它的无人机来提供快速、高效的援助。",
+    "weapon": [
+      {
+        "size": 2,
+        "num": 4,
+        "name": "机炮"
+      },
+      {
+        "size": 3,
+        "num": 2,
+        "name": "人工炮台 [4S2机炮]"
+      },
+      {
+        "size": 3,
+        "num": 4,
+        "name": "基本铰接式维修无人机 (BARD)"
+      }
+    ],
+    "shield": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M型护盾生成器"
+      }
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 38.5,
+      "y": 16.5,
+      "z": 10
+    }
+  },
+  {
+    "name": "SRV",
+    "chinese_name": "SRV",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 231680,
+    "cargo": 10,
+    "manufactory": "Argo Astronautics",
+    "manufactory_chinese_name": "南船座宇航",
+    "size": 4,
+    "crewSize": 1,
+    "role": "回收",
+    "description": "说到完成工作，南船座从不会乱来。从简单的装货和货物拖曳到令人困扰的搜救行动，SRV总能处理您可以扔给它的一切事情。定制的牵引系统创新地采用了板臂组合，不止让你能够轻松单人使用，还能进行团队牵引完成更大的任务。耐用的护盾和重型装甲保证你机组人员和乘客的安全，即使情况变得棘手，它们依旧保障着座舱和组件的完整。",
+    "weapon": [
+      {
+        "size": 2,
+        "num": 4,
+        "name": "机炮"
+      }
+    ],
+    "shield": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M型护盾生成器"
+      }
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size": 2,
+        "num": 1,
+        "name": "M级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 28.5,
+      "y": 19.5,
+      "z": 8.7
+    }
+  },
+  {
+    "name": "Nautilus",
+    "chinese_name": "鹦鹉螺",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 13526320,
+    "cargo": 8,
+    "manufactory": "Aegis Dynamics",
+    "manufactory_chinese_name": "圣盾动力",
+    "size": 4,
+    "crewSize": 4,
+    "role": "战斗",
+    "description": "圣盾动力鹦鹉螺级战术布雷船在四个世纪的服役中代表着终极的战略作战工程，具备完全一体化的机雷部署、扫雷和解除武装的能力。",
+    "weapon": [
+      {
+        "size": 0,
+        "num": 1,
+        "name": "无数据"
+      }
+    ],
+    "shield": [
+      {
+        "size": 0,
+        "num": 1,
+        "name": "无数据"
+      }
+    ],
+    "missile": [
+      {
+        "size": 0,
+        "num": 1,
+        "name": "无数据"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 0,
+        "num": 1,
+        "name": "无数据"
+      }
+    ],
+    "dimension": {
+      "x": 125,
+      "y": 72,
+      "z": 21.6
+    }
+  },
+  {
+    "name": "Perseus",
+    "chinese_name": "英仙座",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1715000,
+    "cargo": 50,
+    "manufactory": "Roberts Space Industries",
+    "manufactory_chinese_name": "罗伯茨太空工业",
+    "size": 2,
+    "crewSize": 6,
+    "role": "战斗",
+    "description": "当RSI要对有说服力的防御做出一个现代解释时，他们回顾了自己的过去，找到了这艘名为英仙座的历史悠久的炮艇。就如同其古老的名字那样，她能够击碎次主力舰级别的巨人，在封锁小队或巡逻小队中加入一艘英仙座炮艇就足以让那些最凶恶好战的敌人在交战之前三思而后行。",
+    "weapon": [
+      {
+        "size": 7,
+        "num": 2,
+        "name": "人工炮台 [2S7机炮]"
+      },
+      {
+        "size": 3,
+        "num": 2,
+        "name": "遥控炮台 [2S3机炮]"
+      }
+    ],
+    "shield": [
+      {
+        "size": 3,
+        "num": 2,
+        "name": "L级护盾生成器"
+      }
+    ],
+    "missile": [
+      {
+        "size": 5,
+        "num": 2,
+        "name": "鱼雷发射器 [10S5鱼雷]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 100,
+      "y": 50,
+      "z": 21
+    }
+  },
+  {
+    "name": "Liberator",
+    "chinese_name": "解放者",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 3650500,
+    "cargo": 230,
+    "manufactory": "Anvil Aerospace",
+    "manufactory_chinese_name": "铁砧航天",
+    "size": 2,
+    "crewSize": 2,
+    "role": "轻航",
+    "description": "解放者传承了铁砧的优良传统；这艘开放式载具运输船设计配有军用航母及探路者同级的量子引擎及远程交通能力，但其专为民用市场所打造。解放者是将您的舰队运输至任何行动前线的理想运输船。",
+    "weapon": [
+      {
+        "size":0,
+        "num": 2,
+        "name": "空武器挂点"
+      },
+      {
+        "size":0,
+        "num": 1,
+        "name": "多功能工具挂点"
+      }
+    ],
+    "shield": [
+      {
+        "size":3,
+        "num": 2,
+        "name": "L级护盾发生器"
+      }
+    ],
+    "missile": [
+      {
+        "size":4,
+        "num": 1,
+        "name": "导弹架 [16S3导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 3,
+        "num": 1,
+        "name": "L级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 119,
+      "y": 67,
+      "z": 25
+    }
+  },
+  {
+    "name": "Expanse",
+    "chinese_name": "武藏 无垠",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 4055000,
+    "cargo": 128,
+    "manufactory": "MISC",
+    "manufactory_chinese_name": "武藏星航",
+    "size": 2,
+    "crewSize": 1,
+    "role": "精炼",
+    "description": "The Expanse is a single-seat refinery ship manufactured by Musashi Industrial and Starflight Concern. It is designed to process front-line raw ore and then either transfer to a dedicated cargo ship or sell the refined ore itself. Ideal in combination with mining vehicles such as the Prospector and/or cargo ships like the Hull A, the Expanse shines as a critical part of an organized mining team.",
+    "weapon": [
+      {
+        "size":1,
+        "num": 2,
+        "name": "武器挂点"
+      },
+      {
+        "size":1,
+        "num": 1,
+        "name": "多功能工具挂点"
+      }
+    ],
+    "shield": [
+      {
+        "size":1,
+        "num": 1,
+        "name": "S级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 1,
+        "num": 1,
+        "name": "S级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 35.5,
+      "y": 21.1,
+      "z": 10.75
+    }
+  },
+  {
+    "name": "Legionnaire",
+    "chinese_name": "军团兵",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 3650500,
+    "cargo": 230,
+    "manufactory": "Anvil Aerospace",
+    "manufactory_chinese_name": "铁砧航天",
+    "size": 2,
+    "crewSize": 3,
+    "role": "维修",
+    "description": "The Legionnaire is a medium boarding craft manufactured by Anvil Aerospace. When the operation calls for a hostile takeover of an enemy vehicle or station, the Anvil Legionnaire is ready to report for duty. With eight drop seats, versatile docking options, and an advanced security infiltration system, even the most difficult of boarding actions is feasible with the Legionnaire in your fleet.",
+    "weapon": [
+      {
+        "size":2,
+        "num": 2,
+        "name": "畸变炮"
+      },
+      {
+        "size":3,
+        "num": 1,
+        "name": "遥控炮台 [2S2机炮]"
+      },
+      {
+        "size":1,
+        "num": 1,
+        "name": "骇入设备"
+      }
+    ],
+    "shield": [
+      {
+        "size":1,
+        "num": 3,
+        "name": "S级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [
+      {
+        "size": 1,
+        "num": 1,
+        "name": "S级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 32,
+      "y": 23.3,
+      "z": 10.2
+    }
+  },
+  {
+    "name": "Storm",
+    "chinese_name": "风暴",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 36500,
+    "cargo": 0,
+    "manufactory": "Tumbril Land Systems",
+    "manufactory_chinese_name": "盾博尔地面系统",
+    "size": 2,
+    "crewSize": 1,
+    "role": "战斗",
+    "description": "The Tumbril Storm was originally a single-seat blitz tank used during the Second Tevarin War. Tumbril has improved upon the original design by making it faster, stronger, and more impactful than previous models.[1] Today, the Storm fulfills a Light / Scout Tank role by providing reconnaissance with light fire power. The Storm is designed to provide support on the battlefield to its larger counterpart, the Nova.",
+    "weapon": [
+      {
+        "size":3,
+        "num": 1,
+        "name": "镭射炮"
+      }
+    ],
+    "shield": [
+      {
+        "size":0,
+        "num": 1,
+        "name": "V级护盾发生器"
+      }
+
+    ],
+    "missile": [
+
+    ],
+    "qdrive": [],
+    "dimension": {
+      "x": 10.5,
+      "y": 7.5,
+      "z": 3.6
+    }
+  },
+  {
+    "name": "Santokyai",
+    "chinese_name": "桑托起亚",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 106566,
+    "cargo": 0,
+    "manufactory": "Aopoa",
+    "manufactory_chinese_name": "奥波亚",
+    "size": 2,
+    "crewSize": 1,
+    "role": "战斗",
+    "description": "凭借强大的希安次世代飞行系统、升级双矢量推进器，以及让人生畏的武器配置，奥波亚精心雕琢出一艘保留了自家著名的灵活机动性与灵敏操控性的战斗飞船。",
+    "weapon": [
+      {
+        "size":3,
+        "num": 4,
+        "name": "固定机炮"
+      }
+    ],
+    "shield": [
+      {
+        "size":2,
+        "num": 1,
+        "name": "M级护盾发生器"
+      }
+    ],
+    "missile": [
+      {
+        "size":3,
+        "num": 4,
+        "name": "导弹架 [2S2导弹]"
+      }
+    ],
+    "qdrive": [
+      {
+        "size": 1,
+        "num": 1,
+        "name": "S级量子驱动器"
+      }
+    ],
+    "dimension": {
+      "x": 24,
+      "y": 23,
+      "z": 10
+    }
+  },
+  {
+    "name": "Mustang Alpha Vindicator",
+    "chinese_name": "野马 阿尔法 卫道士",
+    "health": 8431,
+    "quantum_fuel": 583,
+    "fuel": 60000,
+    "mass": 34000,
+    "cargo": 0,
+    "manufactory": "Consolidated Outland",
+    "manufactory_chinese_name": "联合外域",
+    "size": 2,
+    "crewSize": 1,
+    "role": "多功能",
+    "description": "为纪念2948年的公民控，联合外域隆重推出野马-阿尔法 维护者，配有塞拉斯·克尔纳亲自设计的专有涂装。",
+    "weapon": [
+      {
+        "size": 2,
+        "num": 2,
+        "name": "联合外域 野马 机鼻炮塔"
+      }
+    ],
+    "shield": [
+      {
+        "size": 1,
+        "num": 2,
+        "name": "墨水"
+      }
+    ],
+    "missile": [],
+    "qdrive": [
+      {
+        "size": 1,
+        "num": 1,
+        "name": "突进"
+      }
+    ],
+    "dimension": {
+      "x": 19,
+      "y": 21.5,
+      "z": 9
+    }
+  },
+  {
+    "name": "Ranger RC",
+    "chinese_name": "游骑兵 RC",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1650,
+    "cargo": 0,
+    "manufactory": "Tumbril Land Systems",
+    "manufactory_chinese_name": "盾博尔地面系统",
+    "size": 2,
+    "crewSize": 1,
+    "role": "竞速",
+    "description": "With a streamlined frame, proprietary X-TEC adaptive tread tires, and Reactive Response precision steering and breaking, the Tumbril Ranger lets you embrace the renegade spirit of the open road while staying thoroughly grounded. Put the hammer down and pump up the adrenaline with the Ranger RC, tuned for maximum speed and response with advanced propulsion and chassis technology.",
+    "weapon": [],
+    "shield": [],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 3.7,
+      "y": 2,
+      "z": 2
+    }
+  },
+  {
+    "name": "Ranger TR",
+    "chinese_name": "游骑兵 TR",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1650,
+    "cargo": 0,
+    "manufactory": "Tumbril Land Systems",
+    "manufactory_chinese_name": "盾博尔地面系统",
+    "size": 2,
+    "crewSize": 1,
+    "role": "战斗",
+    "description": "借助强大的车架，专有的X-TEC自适应胎面轮胎以及精确的转向和制动功能，盾博尔游骑兵可以让您在保持充分的接地的同时拥抱叛逆精神。但是冒险并非总是按计划进行，因此游骑兵 TR配备了双武器安装座，以确保您的火力覆盖远超需求。",
+    "weapon": [
+      {
+        "size": 1,
+        "num": 2,
+        "name": "武器挂点"
+      }
+    ],
+    "shield": [],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 3.7,
+      "y": 2,
+      "z": 2
+    }
+  },
+  {
+    "name": "Ranger CV",
+    "chinese_name": "游骑兵 CV",
+    "health": -1,
+    "quantum_fuel": -1,
+    "fuel": -1,
+    "mass": 1650,
+    "cargo": 0,
+    "manufactory": "Tumbril Land Systems",
+    "manufactory_chinese_name": "盾博尔地面系统",
+    "size": 2,
+    "crewSize": 1,
+    "role": "旅游",
+    "description": "With a powerful frame, proprietary X-TEC adaptive tread tires, and Reactive Response precision steering and breaking, the Tumbril Ranger lets you embrace the renegade spirit of the open road while staying thoroughly grounded. Born to tame the wild frontier, the Ranger CV takes adventure touring to the next level and delivers the goods with an auxiliary fuel tank and custom 0.375 SCU pannier.",
+    "weapon": [],
+    "shield": [],
+    "missile": [],
+    "qdrive": [],
+    "dimension": {
+      "x": 3.7,
+      "y": 2,
+      "z": 2
     }
   }
-
 ]

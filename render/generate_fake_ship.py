@@ -30,6 +30,7 @@ class FakeShip(BaseModel):
     weapon: list[Component]
     shield: list[Component]
     missile: list[Component]
+    qdrive: list[Component]
 
     class Dimension(BaseModel):
         x: int
@@ -47,11 +48,13 @@ class FakeShip(BaseModel):
             sample_missile = Ship.Data.Loadout(**json.load(f))
         with open(Path(__file__).parent / "data" / "fake_ship" / "sample_shield.json", 'r', encoding="utf-8") as f:
             sample_shield = Ship.Data.Loadout(**json.load(f))
+        with open(Path(__file__).parent / "data" / "fake_ship" / "sample_qdrive.json", 'r', encoding="utf-8") as f:
+            sample_qdrive = Ship.Data.Loadout(**json.load(f))
         sample_ship.data.name = self.name
         sample_ship.data.chineseName = self.chinese_name
         sample_ship.data.manufacturerData.data.chineseName = self.manufactory_chinese_name
         sample_ship.data.manufacturerData.data.name = self.manufactory
-        sample_ship.data.chineseDescription = self.description
+        sample_ship.data.chineseDescription = "       " + self.description
         sample_ship.data.hull.mass = self.mass
         sample_ship.data.hull.hp[0].hp = self.health
         sample_ship.data.vehicle.size.x = self.dimension.x
@@ -62,6 +65,7 @@ class FakeShip(BaseModel):
         sample_ship.data.vehicle.crewSize = self.crewSize
         sample_ship.data.vehicle.career = self.role
         sample_ship.localName = f"fake_{self.name.lower()}"
+        sample_ship.data.cargo = self.cargo
         # sample_ship.data.items.cargos.append(Ship.Data.Items.Cargo(**{
         #     "data": {
         #         "cargoGrid": {
@@ -88,6 +92,12 @@ class FakeShip(BaseModel):
                 missile_copy.mount.data.chineseName = missile.name
                 missile_copy.mount.data.size = missile.size
                 sample_ship.data.loadout.append(missile_copy)
+        for qdrive in self.qdrive:
+            for i in range(qdrive.num):
+                qdrive_copy = sample_qdrive.copy(deep=True)
+                qdrive_copy.mount.data.chineseName = qdrive.name
+                qdrive_copy.mount.data.size = qdrive.size
+                sample_ship.data.loadout.append(qdrive_copy)
         return sample_ship
 
 

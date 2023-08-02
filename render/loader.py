@@ -213,6 +213,8 @@ class Loader:
         self.utilities = self.load_utilities()
         self.paints = self.load_paints()
         self.missile_racks = self.load_missile_racks()
+        for ship in self.ships:
+            ship.isFlyable = True
         # self.match_loaner_ships()
 
     def find_ship_by_name(self, name: str) -> Optional[Ship]:

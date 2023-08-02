@@ -348,7 +348,7 @@ class PicDrawer:
             # raise NotImplementedError
 
         def save(self, pic_path: pathlib.Path):
-            self.pic.save(str(pic_path / f"{self.data.data.ref}.png"))
+            self.pic.save(str(pic_path / f"{self.data.data.name}.png"))
 
         @classmethod
         def resize(cls, image: Image, ratio: float) -> Image:
@@ -842,6 +842,9 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
             self.pic.paste(component_pic, (250, 500), component_pic)
         except FileNotFoundError:
             print(f"{self.data.localName} not found")
+        except AttributeError as e:
+            print(e)
+            print(f"{self.data.localName} not found")
 
     def add_subtype(self):
         font = ImageFont.truetype(str(self.default_font_path), size=110)
@@ -938,17 +941,22 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         font = ImageFont.truetype(str(self.secondary_font_path), size=30)
 
         ifcs = self.data.data.ifcs
-        text = f"机动信息\n俯仰: {ifcs.angularVelocity.x}度/秒\n偏航: {ifcs.angularVelocity.z}度/秒\n滚转: {ifcs.angularVelocity.y}度/秒"
-
-        text += f"\n最大速度：{ifcs.maxSpeed}米/秒\n加力后速度：{ifcs.maxAfterburnSpeed}米/秒\n"
-        text += f"最大加力时间：{round(ifcs.afterburner.capacitorMax / ifcs.afterburner.capacitorAfterburnerIdleCost)}秒\n"
+        text = ""
+        if ifcs is not None:
+            text += f"机动信息\n"
+            text += f"俯仰: {ifcs.angularVelocity.x}度/秒\n偏航: {ifcs.angularVelocity.z}度/秒\n滚转: {ifcs.angularVelocity.y}度/秒"
+            text += f"\n最大速度：{ifcs.maxSpeed}米/秒\n加力后速度：{ifcs.maxAfterburnSpeed}米/秒\n"
+            text += f"最大加力时间：{round(ifcs.afterburner.capacitorMax / ifcs.afterburner.capacitorAfterburnerIdleCost)}秒\n"
 
         text += f"\n尺寸定位\n舰船尺寸：{self.data.data.vehicle.size.x}米x{self.data.data.vehicle.size.y}米x{self.data.data.vehicle.size.z}米\n"
         text += f"舰船重量：{int(self.data.data.hull.mass / 1000)} 吨\n"
         text += f"额定舰员：{self.data.data.vehicle.crewSize}人\n"
-        text += f"个人存储：{self.data.data.items.get_inventory_size()} SCU\n"
+        text += f"个人存储：{round(self.data.data.items.get_inventory_size(), 2)} SCU\n"
 
         text += f"\n战斗信息\n"
+        if self.data.data.armor:
+            text += f"装甲物理减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damagePhysical)*100)}%\n"
+            text += f"装甲能量减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damageEnergy)*100)}%\n"
         if self.data.data.shield:
             text += f"护盾类型：{self.data.data.shield.faceType}\n"
         if self.data.data.weaponRegenPoolCrew:
@@ -1236,12 +1244,14 @@ if __name__ == '__main__':
     # drawer.draw_sheet(Sheet(**test_data))
     calculator = Calculator()
 
-    ship_data = calculator.ships + load_fake_ship()
+    # ship_data = calculator.ships + load_fake_ship()
+    ship_data = load_fake_ship()
 
     for ship in ship_data:
         # try:
         ship_drawer = ShipDrawer(ship, calculator)
         ship_drawer.draw(pathlib.Path("test/"))
+        # raise Exception
         # except Exception as e:
         #     print(f"{ship.data.chineseName}({ship.localName}) 生成失败")
         #     logging.exception(e)

@@ -720,6 +720,25 @@ class Ship(ComponentData):
 
         shield: Optional[Shield]
 
+        class Armor(BaseModel):
+            class Data(BaseModel):
+                type: str
+                ref: str
+
+                class ArmorData(BaseModel):
+                    class DamageMultiplier(BaseModel):
+                        damagePhysical: float
+                        damageEnergy: float
+                        damageDistortion: float
+                        damageThermal: float
+                        damageBiochemical: float
+
+                    damageMultiplier: DamageMultiplier
+                armor: ArmorData
+            data: Data
+
+        armor: Optional[Armor]
+
         class WeaponRegenPoolCrew(BaseModel):
             regenFillRate: float
             ammoLoad: float
