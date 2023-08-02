@@ -361,7 +361,7 @@
     "size": 4,
     "crewSize": 28,
     "role": "战斗",
-    "description": "The Aegis Idris-M (Idris Military) is a frigate used by the UEE Military.[1] It lends its name to the standard line of frigates in the United Empire of Earth Navy (UEEN). Idrises are larger than traditional corvettes, but smaller than destroyers and destroyer escorts.",
+    "description": "伊德里斯-M是UEE军方使用的护卫舰。 它以地球联合帝国海军 (UEEN) 的标准护卫舰系列命名。 伊德里斯比传统护卫舰大，但比驱逐舰和护卫舰小。",
     "weapon": [
       {
         "size": 10,
@@ -941,7 +941,7 @@
     "size": 2,
     "crewSize": 5,
     "role": "货运",
-    "description": "Model D of the MISC cargo Hull series is the powerhouse of freighter ingenuity. This fourth iteration features a wide range of cargo configurations, making it the ideal ship for hauling large cargo to your destination. With massive engines and hearty defences, the Hull D will get you to your delivery point on time and intact.",
+    "description": "武藏货轮系列的D型是货运独创性的动力源泉。 货轮系列的第四次迭代具有多种货物配置，使其成为将大型货物运输到目的地的理想船舶。 凭借庞大的发动机和坚固的防御，货轮D将让您和您的货物完好无损地准时到达交货点。",
     "weapon": [
       {
         "size":4,
@@ -991,7 +991,7 @@
     "size": 2,
     "crewSize": 5,
     "role": "货运",
-    "description": "MISC's Hull E is the big fish in this cargo Hull series. With its unparalleled capacity and immense adaptive structure, it can dominate any transport job. Large and extremely diverse, the MISC Hull E provides the hauling strength and defensive power any captain could dream of. If it's a big job the Hull E will get it done.",
+    "description": "武藏的货轮E是货轮系列中的巨无霸。 凭借其无与伦比的容量和巨大的适应性结构，它可以承载任何运输任务。 武藏的货轮E体型庞大且极其多样化，可提供任何舰长梦寐以求的牵引力和防御力。 如果这是一项艰巨的任务，货轮E是时候出马了。",
     "weapon": [
       {
         "size":5,
@@ -1360,7 +1360,7 @@
     "size": 2,
     "crewSize": 5,
     "role": "货运",
-    "description": "The MISC Hull B is medium-sized cargo vessel that sits roughly halfway between the Constellation Taurus and the Caterpillar in terms of hauling capacity. Although the Hull B is known for being quite rugged, it is a pure cargo transport and thus not suited for most other roles. The Hull B is used by corporations and Citizens alike in large numbers, and it is not uncommon to spot several in different liveries during a single flight.",
+    "description": "货轮B是中型货船，其运输能力大约介于金牛座和毛虫之间。 尽管货轮B以其坚固耐用而闻名，但它专注于货物运输，因此不适合大多数其他任务。 货轮B被大量企业和公民使用，在一次飞行任务中发现几架不同涂装的情况并不少见。",
     "weapon": [
       {
         "size":2,
@@ -1810,7 +1810,7 @@
     "size": 2,
     "crewSize": 1,
     "role": "精炼",
-    "description": "The Expanse is a single-seat refinery ship manufactured by Musashi Industrial and Starflight Concern. It is designed to process front-line raw ore and then either transfer to a dedicated cargo ship or sell the refined ore itself. Ideal in combination with mining vehicles such as the Prospector and/or cargo ships like the Hull A, the Expanse shines as a critical part of an organized mining team.",
+    "description": "无垠是一艘单座精炼船，由武藏工业与星航株式会社制造。 它旨在采矿前线加工原矿石，然后转移到专用货船或自行出售精炼矿石。 无垠非常适合与勘探者等采矿船只和/或货轮A等货船结合使用，是有组织的采矿团队的重要组成部分。",
     "weapon": [
       {
         "size":1,
@@ -1859,8 +1859,8 @@
     "manufactory_chinese_name": "铁砧航天",
     "size": 2,
     "crewSize": 3,
-    "role": "维修",
-    "description": "The Legionnaire is a medium boarding craft manufactured by Anvil Aerospace. When the operation calls for a hostile takeover of an enemy vehicle or station, the Anvil Legionnaire is ready to report for duty. With eight drop seats, versatile docking options, and an advanced security infiltration system, even the most difficult of boarding actions is feasible with the Legionnaire in your fleet.",
+    "role": "战斗",
+    "description": "军团兵是铁砧航天制造的中型登船舰。 当行动要求接管敌方舰船或基地时，铁砧军团兵已准备好报到。 凭借八个座位、多功能对接选项和先进的安全渗透系统，即使是最困难的登陆行动也可以在您的舰队中使用军团兵进行。",
     "weapon": [
       {
         "size":2,
@@ -1915,7 +1915,7 @@
     "size": 2,
     "crewSize": 1,
     "role": "战斗",
-    "description": "The Tumbril Storm was originally a single-seat blitz tank used during the Second Tevarin War. Tumbril has improved upon the original design by making it faster, stronger, and more impactful than previous models.[1] Today, the Storm fulfills a Light / Scout Tank role by providing reconnaissance with light fire power. The Storm is designed to provide support on the battlefield to its larger counterpart, the Nova.",
+    "description": "盾博尔风暴最初是第二次塔维因战争期间使用的单座闪电战坦克。 盾博尔在原始设计的基础上进行了改进，使其比以前的型号更快、更强、更有行动力。如今，风暴通过提供轻型火力侦察来履行轻型/侦察坦克的角色。 风暴坦克的设计目的是在战场上为其更大的战友新星级提供支持。",
     "weapon": [
       {
         "size":3,
@@ -2044,7 +2044,7 @@
     "size": 2,
     "crewSize": 1,
     "role": "竞速",
-    "description": "With a streamlined frame, proprietary X-TEC adaptive tread tires, and Reactive Response precision steering and breaking, the Tumbril Ranger lets you embrace the renegade spirit of the open road while staying thoroughly grounded. Put the hammer down and pump up the adrenaline with the Ranger RC, tuned for maximum speed and response with advanced propulsion and chassis technology.",
+    "description": "凭借流线型车架、专有的X-TEC自适应胎面轮胎以及反应响应精确转向和刹车，盾博尔游骑兵让您在保持彻底接地的同时拥抱开放道路的叛逆精神。 放下锤子，用游骑兵RC激发肾上腺素，通过先进的推进和底盘技术达到最大速度。",
     "weapon": [],
     "shield": [],
     "missile": [],
@@ -2098,7 +2098,7 @@
     "size": 2,
     "crewSize": 1,
     "role": "旅游",
-    "description": "With a powerful frame, proprietary X-TEC adaptive tread tires, and Reactive Response precision steering and breaking, the Tumbril Ranger lets you embrace the renegade spirit of the open road while staying thoroughly grounded. Born to tame the wild frontier, the Ranger CV takes adventure touring to the next level and delivers the goods with an auxiliary fuel tank and custom 0.375 SCU pannier.",
+    "description": "凭借强大的车架、专有的 X-TEC 自适应胎面轮胎以及反应响应精确转向和刹车，盾博尔游骑兵让您在保持彻底接地的同时拥抱开放道路的叛逆精神。 游骑兵 CV专为驯服狂野边境而生，将冒险旅行提升到一个新的水平，并配备辅助油箱和定制的0.375 SCU货箱。",
     "weapon": [],
     "shield": [],
     "missile": [],

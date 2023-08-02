@@ -193,7 +193,9 @@ class PicDrawer:
             if description is None:
                 description = self.data.data.description
             if description is None:
-                description = ""
+                description = " "
+            if description[0] != " ":
+                description = "       " + description
             description_list = description.split("\\n")
             if len(description_list) > 1:
                 description = "       " + description_list[-1]
@@ -953,20 +955,21 @@ class ShipDrawer(PicDrawer.ComponentDrawer):
         text += f"额定舰员：{self.data.data.vehicle.crewSize}人\n"
         text += f"个人存储：{round(self.data.data.items.get_inventory_size(), 2)} SCU\n"
 
-        text += f"\n战斗信息\n"
-        if self.data.data.armor:
-            text += f"装甲物理减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damagePhysical)*100)}%\n"
-            text += f"装甲能量减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damageEnergy)*100)}%\n"
-        if self.data.data.shield:
-            text += f"护盾类型：{self.data.data.shield.faceType}\n"
-        if self.data.data.weaponRegenPoolCrew:
-            text += f"机载电容量：{int(self.data.data.weaponRegenPoolCrew.ammoLoad)}\n"
-            text += f"机载电容回复：{int(self.data.data.weaponRegenPoolCrew.regenFillRate)}/秒\n"
-        if self.data.data.weaponRegenPoolTurret:
-            text += f"炮塔电容量：{int(self.data.data.weaponRegenPoolTurret.ammoLoad)}\n"
-            text += f"炮塔电容回复：{int(self.data.data.weaponRegenPoolTurret.regenFillRate)}/秒\n"
+        if self.data.data.shield and self.data.data.shield.faceType != "None":
+            text += f"\n战斗信息\n"
+            if self.data.data.armor:
+                text += f"装甲物理减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damagePhysical)*100)}%\n"
+                text += f"装甲能量减伤：-{int((1-self.data.data.armor.data.armor.damageMultiplier.damageEnergy)*100)}%\n"
+            if self.data.data.shield:
+                text += f"护盾类型：{self.data.data.shield.faceType}\n"
+            if self.data.data.weaponRegenPoolCrew:
+                text += f"机载电容量：{int(self.data.data.weaponRegenPoolCrew.ammoLoad)}\n"
+                text += f"机载电容回复：{int(self.data.data.weaponRegenPoolCrew.regenFillRate)}/秒\n"
+            if self.data.data.weaponRegenPoolTurret:
+                text += f"炮塔电容量：{int(self.data.data.weaponRegenPoolTurret.ammoLoad)}\n"
+                text += f"炮塔电容回复：{int(self.data.data.weaponRegenPoolTurret.regenFillRate)}/秒\n"
 
-        self.find_component("Turret")
+        # self.find_component("Turret")
 
         self.drawer.text((110, 450), text, font=font)
 
@@ -1244,8 +1247,8 @@ if __name__ == '__main__':
     # drawer.draw_sheet(Sheet(**test_data))
     calculator = Calculator()
 
-    # ship_data = calculator.ships + load_fake_ship()
-    ship_data = load_fake_ship()
+    ship_data = calculator.ships + load_fake_ship()
+    # ship_data = load_fake_ship()
 
     for ship in ship_data:
         # try:
